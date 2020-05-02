@@ -1,11 +1,13 @@
 import React, { Fragment } from 'react';
 import './App.css';
-
 import Navbar from './components/Navbar/Navbar';
+import Landing from './components/Pages/Landing';
 
 const App = () => (
   <Fragment>
-    <h1>Welcome to the Good News Station!</h1>
+    <Navbar />
+    <Landing />
+    <h1>Temp Header</h1>
   </Fragment>
 )
 
