@@ -4,7 +4,7 @@ import { Posts } from "../posts/Posts";
 
 const Landing = () => {
   return (
-    <section className="landingPage">
+    <section className="container">
       <div className="overlay">
         <div className="landing-inner">
           <h1 className="title">Welcome to Good News Station!</h1>
@@ -13,7 +13,7 @@ const Landing = () => {
             Please create an account or sign in to create a post and start
             adding some good news.
           </h4>
-          <div clasName="mainButtons">
+          <div className="mainButtons">
             <Link to="/register" className="btn-Primary">
               Create an Account
             </Link>
