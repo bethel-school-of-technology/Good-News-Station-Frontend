@@ -56,7 +56,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             onChange={e => onChange(e)}
           />
           <small className='form-text'>
-            Good News is all around you =)
+            Good News is all around you <strong className="smilely-colors">=)</strong>
           </small>
         </div>
         <div className='form-group'>
