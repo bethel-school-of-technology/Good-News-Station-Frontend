@@ -8,7 +8,7 @@ const Landing = ({ getPosts, posts }) => {
     <section className="container">
       <div className="">
         <div className="">
-          <h1 className="large text-primary">Welcome to Good News Station!</h1>
+          <h1 className="large text-primary">Welcome to the Good News Station!</h1>
           <h4 className="">
             Please create an account or sign in to create a post and start
             adding some good news.
