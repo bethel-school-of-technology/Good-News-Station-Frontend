@@ -1,9 +1,10 @@
 import React, { Fragment, useEffect } from "react";
 import { Link } from "react-router-dom";
-import PostItem from "../posts/PostItem";
-import { getPosts } from "../../actions/post";
+import LandingPosts from "../posts/LandingPosts";
 
-const Landing = ({ getPosts, posts }) => {
+
+const Landing = ({ }) => {
+
   return (
     <section className="container">
       <div className="">
@@ -14,16 +15,14 @@ const Landing = ({ getPosts, posts }) => {
             adding some good news.
           </h4>
 
-          {/* LIST OF POSTS */}
-
           <Fragment>
             <h1 className="">Some Current Good News</h1>
             <p className="lead"></p>
 
-            {/* POSTS LISTS */}
+            {/* LIST OF POSTS */}
 
-            <div className="posts">
-              {(post) => <PostItem key={post._id} post={post} />}
+            <div>
+              {/* <LandingPosts /> */}
             </div>
           </Fragment>
 
