@@ -17,7 +17,7 @@ export default function (state = initialState, action) {
   const { type, payload } = action;
 
   switch (type) {
-    case ADD_POSTS:
+    case ADD_POST:
       return {
         ...state,
         posts: [payload, ...state.posts],
