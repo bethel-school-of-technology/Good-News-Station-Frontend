@@ -9,11 +9,9 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
         getProfileById(match.params.id);
     }, [getProfileById, match.params.id]);
 
-    return (
-        <div>
-            profile
-        </div>
-    )
+    return <Fragment>
+        {profile === null ? <Spinner /> : <Fragment>Profile</Fragment>}
+    </Fragment>;
 };
 
 Profile.propTypes = {
