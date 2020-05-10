@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import ProfileTop from './ProfileTop';
+import ProfileAbout from './ProfileAbout';
 import { getProfileById } from '../../actions/profile';
 
 const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
@@ -23,6 +24,7 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
                 )}
                 <div class="profile-grid- my-1">
                     <ProfileTop profile={profile} />
+                    <ProfileAbout profile={profile} />
                 </div>
             </Fragment>}
         </Fragment>
@@ -30,14 +32,14 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
 };
 
 Profile.propTypes = {
-    getProfileById: PropTypes.func.isRequired,
+                getProfileById: PropTypes.func.isRequired,
     profile: PropTypes.object.isRequired,
     auth: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-    profile: state.profile,
+                profile: state.profile,
     auth: state.auth
 });
 
-export default connect(mapStateToProps, { getProfileById })(Profile)
+export default connect(mapStateToProps, { getProfileById})(Profile)
