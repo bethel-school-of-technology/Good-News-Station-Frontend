@@ -349,6 +349,20 @@
     margin-right: 0.6rem;
   }
   
+  /* Sidebar */
+   .sidebar {
+position: fixed;     
+height: 100%;
+width: 75px;     
+z-index: 1;      
+top: 3.4em;      
+background-color: #222; 
+overflow-x: hidden;     
+padding-top: 10px;
+float: right;
+
+}
+  
   /* Landing Page */
   .landing {
     position: relative;
