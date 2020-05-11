@@ -58,13 +58,13 @@ const ProfileForm = ({
                 <div className="form-group">
                     <input
                         type="text"
-                        placeholder="Favorite Quote"
+                        placeholder="Inspirational Quote"
                         name="status"
                         value={status}
                         onChange={onChange}
                     />
                     <small className="form-text">
-                        Favorite Quote
+                        Inspirational Quote
           </small>
                 </div>
 
