@@ -65,6 +65,10 @@
   .text-center {
     text-align: center;
   }
+
+  .text-left {
+    text-align: left;
+  }
   
   .text-primary {
     color: var(--primary-color);
@@ -505,6 +509,9 @@
     color: #aaa;
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
+  }
+  .post-likes {
+    float: right;
   }
   
   /* Mobile Styles */
