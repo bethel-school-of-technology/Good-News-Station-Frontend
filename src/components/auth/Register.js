@@ -4,6 +4,9 @@ import { Link, Redirect } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
+// Darkmode Begin
+import Darkmode from 'darkmode-js';
+// Darkmode End
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -85,6 +88,24 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     </Fragment>
   );
 };
+
+// Darkmode Beginning
+var options = {  
+  bottom: '64px', // default: '32px'  
+  right: '32px', // default: '32px'  
+  left: 'unset', // default: 'unset'  
+  time: '0.3s', // default: '0.3s'  
+  mixColor: '#fff', // default: '#fff'  
+  backgroundColor: '#fff',  // default: '#fff'  
+  buttonColorDark: '#100f2c',  // default: '#100f2c'  
+  buttonColorLight: '#fff', // default: '#fff'  
+  saveInCookies: false, // default: true,  
+  label: '🌓', // default: ''  
+  autoMatchOsTheme: true // default: true
+}
+  const darkmode = new Darkmode(options);
+  new Darkmode({ label: '🌓' }).showWidget();
+// DarkMode End
 
 Register.propTypes = {
   setAlert: PropTypes.func.isRequired,
