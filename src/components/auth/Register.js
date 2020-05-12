@@ -65,7 +65,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         <div className='form-group'>
           <input
             type='password'
-            placeholder='Password'
+            placeholder='Password (Must be 6 characters or more)'
             name='password'
             value={password}
             onChange={e => onChange(e)}
