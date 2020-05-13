@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import DashboardActions from './DashboardActions';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 
+
 const Dashboard = ({
   getCurrentProfile,
   deleteAccount,
@@ -21,7 +22,8 @@ const Dashboard = ({
       <p className="lead">
         <i className="fas fa-user" /> Welcome {user && user.name}
       </p>
-      {profile !== null ? (
+      {profile !== null ? (  
+             
         <Fragment>
           <DashboardActions />
 
