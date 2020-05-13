@@ -15,8 +15,8 @@ const ProfileTop = ({
             <p class='lead'>"{status}"</p>
             <p>{location && <span>{location}</span>}</p>
         </div>
-    )
-}
+   );
+};
 
 ProfileTop.propTypes = {
     profile: PropTypes.object.isRequired

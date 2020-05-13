@@ -25,7 +25,7 @@ const Dashboard = ({
       {profile !== null ? (  
              
         <Fragment>
-          <DashboardActions />
+          <DashboardActions key={profile._id} profile={profile} />
 
           <div className="my-2">
             <button className="btn btn-danger" onClick={() => deleteAccount()}>
