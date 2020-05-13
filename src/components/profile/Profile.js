@@ -6,6 +6,7 @@ import Spinner from '../layout/Spinner';
 import ProfileTop from './ProfileTop';
 import ProfileAbout from './ProfileAbout';
 import { getProfileById } from '../../actions/profile';
+import FollowProfileButton from '../user/FollowProfileButton';
 
 const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
   useEffect(() => {
@@ -31,6 +32,7 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
           <div className="profile-grid my-1">
             <ProfileTop profile={profile} />
             <ProfileAbout profile={profile} />
+            <FollowProfileButton />
           </div>
         </Fragment>
       )}
