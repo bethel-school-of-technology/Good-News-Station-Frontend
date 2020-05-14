@@ -6,7 +6,7 @@ import Spinner from '../layout/Spinner';
 import ProfileTop from './ProfileTop';
 import ProfileAbout from './ProfileAbout';
 import { getProfileById } from '../../actions/profile';
-import FollowProfileButton from '../user/FollowProfileButton';
+import FollowUserButton from '../user/FollowUserButton';
 
 const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
   useEffect(() => {
@@ -22,6 +22,7 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
           <Link to="/profiles" className="btn btn-light">
             Back To Profiles
           </Link>
+         
           {auth.isAuthenticated &&
             auth.loading === false &&
             auth.user._id === profile.user._id && (
@@ -32,7 +33,13 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
           <div className="profile-grid my-1">
             <ProfileTop profile={profile} />
             <ProfileAbout profile={profile} />
-            <FollowProfileButton />
+            
+            {auth.isAuthenticated &&
+            auth.loading === false &&
+            auth.user._id === profile.user._id && (
+            <FollowUserButton />  
+            )}
+            
           </div>
         </Fragment>
       )}
