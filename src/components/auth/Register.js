@@ -103,7 +103,7 @@ var options = {  
   label: '🌓', // default: ''  
   autoMatchOsTheme: true // default: true
 }
-  const darkmode = new Darkmode(options);
+  // const darkmode = new Darkmode(options);
   new Darkmode({ label: '🌓' }).showWidget();
 // DarkMode End
 
