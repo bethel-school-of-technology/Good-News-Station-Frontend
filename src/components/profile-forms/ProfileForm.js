@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createProfile, getCurrentProfile } from '../../actions/profile';
@@ -40,10 +40,10 @@ const ProfileForm = ({
         bio
     } = formData;
 
-    const onChange = (e) =>
+    const onChange = e =>
         setFormData({ ...formData, [e.target.name]: e.target.value });
 
-    const onSubmit = (e) => {
+    const onSubmit = e => {
         e.preventDefault();
         createProfile(formData, history, profile ? true : false);
     };
@@ -105,12 +105,12 @@ ProfileForm.propTypes = {
     createProfile: PropTypes.func.isRequired,
     getCurrentProfile: PropTypes.func.isRequired,
     profile: PropTypes.object.isRequired
-};
-
-const mapStateToProps = (state) => ({
+  };
+  
+  const mapStateToProps = state => ({
     profile: state.profile
-});
-
-export default connect(mapStateToProps, { createProfile, getCurrentProfile })(
-    withRouter(ProfileForm)
-);
+  });
+  
+  export default connect(mapStateToProps, { createProfile, getCurrentProfile })(
+    ProfileForm
+  );

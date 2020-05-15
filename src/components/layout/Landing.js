@@ -30,11 +30,11 @@ const Landing = ({ }) => {
 
         {/* LIST OF POSTS */}
 
-          <Fragment>
+         
             <div>
               <LandingPosts />
             </div>
-          </Fragment>
+          
 
         </div>
       </div>

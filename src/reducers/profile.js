@@ -41,7 +41,6 @@ import {
         return {
           ...state,
           profile: null,
-          repos: []
         };
       default:
         return state;
