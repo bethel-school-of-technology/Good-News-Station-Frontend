@@ -56,6 +56,12 @@ const ProfileForm = ({
       </p>
             <form className="form" onSubmit={onSubmit}>
                 <div className="form-group">
+                    <div>
+                        Go
+                    <a href="https://wordpress.com/log-in?client_id=1854&redirect_to=https%3A%2F%2Fpublic-api.wordpress.com%2Foauth2%2Fauthorize%3Fclient_id%3D1854%26response_type%3Dcode%26blog_id%3D0%26state%3D8c9cbb046effe3ddcb0d8cd9ec4a76c7308d39a7624efae65db95273317d24ff%26redirect_uri%3Dhttps%253A%252F%252Fen.gravatar.com%252Fconnect%252F%253Faction%253Drequest_access_token" target="blank"> Here </a>
+                    to set profile picture by creating a Gravatar!
+                    </div>
+                    <br></br>
                     <input
                         type="text"
                         placeholder="Inspirational Quote"
@@ -105,12 +111,12 @@ ProfileForm.propTypes = {
     createProfile: PropTypes.func.isRequired,
     getCurrentProfile: PropTypes.func.isRequired,
     profile: PropTypes.object.isRequired
-  };
-  
-  const mapStateToProps = state => ({
+};
+
+const mapStateToProps = state => ({
     profile: state.profile
-  });
-  
-  export default connect(mapStateToProps, { createProfile, getCurrentProfile })(
+});
+
+export default connect(mapStateToProps, { createProfile, getCurrentProfile })(
     ProfileForm
-  );
+);
