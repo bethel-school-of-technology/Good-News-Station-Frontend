@@ -351,17 +351,30 @@
   
   /* Sidebar */
    .sidebar {
-position: fixed;     
-height: 100%;
-width: 75px;     
-z-index: 1;      
-top: 3.4em;      
-background-color: #222; 
-overflow-x: hidden;     
-padding-top: 10px;
-float: right;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2rem;
+    position: fixed;
+    z-index: 1;
+    width: 20em;
+    top: 5em;
+    opacity: 0.9;
+    background-color: #343a40;
 }
+
+  .sidebar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2rem;
+    position: fixed;
+    z-index: 1;
+    width: 20em;
+    top: 25em;
+    opacity: 0.9;
+    background-color: #343a40;
+  }
   
   /* Landing Page */
   .landing {
