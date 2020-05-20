@@ -408,19 +408,20 @@ button {
 
   /* Sidebar */
   .sidebar {
-    display: flex;
+    /*display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+     */
+     position: sticky;
     width: 25%;
     z-index: 1;
-    top: 15em; 
-    opacity: 0.9;
-    background-color: #343a40;
+    opacity: 0.9; 
+    background-color: #343a40; 
+    margin-top: 10em; 
 
 }
 
-  .sidebar2 {
+  .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -437,17 +438,19 @@ button {
     top: 10em;
   }
 
-  .sidebarContainer {
+  .container-s {
     display: flex;
     width: 100%;
   }
   .mainContent-Landing {
   width: 75%;
-  margin: auto;
+ /* margin: auto;
   overflow: hidden;
   padding: 0 2rem;
+  
+  margin-bottom: 3rem; */
   margin-top: 6rem;
-  margin-bottom: 3rem;
+  
   
   }
 

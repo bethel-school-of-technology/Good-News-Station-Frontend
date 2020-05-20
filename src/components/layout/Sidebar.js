@@ -65,7 +65,7 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
           <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
         )}
       </nav>
-      <div  className="sidebar2">
+      <div  className="footer">
         <h1 >Footer</h1>
       </div>
     </div>

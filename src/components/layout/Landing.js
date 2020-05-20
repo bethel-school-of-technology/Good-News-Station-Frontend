@@ -7,9 +7,9 @@ import Sidebar from "./Sidebar"
 const Landing = ({ }) => {
 
   return (
-    <div className="sidebarContainer">
+    <div className="container-s">
+  
       <div className="mainContent-Landing">
-      <section className="container">
         <div className="text-center">
           <div className="">
             <h1 className="large text-primary">Welcome to the Good News Station!</h1>
@@ -41,7 +41,6 @@ const Landing = ({ }) => {
 
           </div>
         </div>
-      </section>
       </div>
       <Sidebar />
     </div>
