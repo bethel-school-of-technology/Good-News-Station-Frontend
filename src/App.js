@@ -24,7 +24,7 @@ const App = () => {
       <Router>
         <Fragment>
           <Navbar />
-          <Sidebar />
+          {/* <Sidebar /> */}
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route component={Routes} />
