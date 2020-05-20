@@ -12,6 +12,7 @@ import Post from '../post/Post';
 import NotFound from '../layout/NotFound';
 import PrivateRoute from '../routing/PrivateRoute';
 import About from '../contact/About'
+import CuratedNews from '../TopWebNews/CuratedNews'
 
 const Routes = props => {
   return (
@@ -19,6 +20,7 @@ const Routes = props => {
       <Alert />
       <Switch>
         <Route exact path="/register" component={Register} />
+        <Route exact path='/gnspicks' component={CuratedNews} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/profiles" component={Profiles} />
         <Route exact path="/profile/:id" component={Profile} />

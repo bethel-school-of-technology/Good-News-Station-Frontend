@@ -42,6 +42,9 @@ img {
   padding: 0 2rem;
   margin-top: 6rem;
   margin-bottom: 3rem;
+  /* background-image: url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/98607444_10158272365991506_8025674076552953856_n.jpg?_nc_cat=109&_nc_sid=730e14&_nc_ohc=70GxdJn9oywAX_OfgVe&_nc_ht=scontent-atl3-1.xx&oh=e4a684cae00e14e7fca02c02dc2684da&oe=5EEA0420);
+  background-repeat: no-repeat;
+  background-size: 1000px; */
 }
 
 /* Text Styles*/
@@ -306,7 +309,7 @@ button {
 .smiley-colors {
   width: 100px;
   height: 100px;
-  color: #17A2B8;
+  color: #17a2b8;
   position: relative;
   animation-name: matchMe;
   animation-duration: 4s;
@@ -316,8 +319,8 @@ button {
 /* Flip Images About Page Begin JH */
 
 .imgAB {
-  width:300px;
-  height:300px;
+  width: 300px;
+  height: 300px;
 }
 .flipColor {
   color: #000000;
@@ -336,14 +339,15 @@ button {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -362,16 +366,34 @@ button {
   transform: rotateY(180deg);
 }
 
-
-
 /* Flip Images About Page End JH */
 
 @keyframes matchMe {
-  0%   {color:red; left:0px; top:0px;}
-  25%  {color:yellow; left:50px; top:0px;}
-  50%  {color:blue; left:0px; top:0px;}
-  75%  {color:green; left:50px; top:0px;}
-  100% {color:#17A2B8; left:0px; top:0px;}
+  0% {
+    color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    color: yellow;
+    left: 50px;
+    top: 0px;
+  }
+  50% {
+    color: blue;
+    left: 0px;
+    top: 0px;
+  }
+  75% {
+    color: green;
+    left: 50px;
+    top: 0px;
+  }
+  100% {
+    color: #17a2b8;
+    left: 0px;
+    top: 0px;
+  }
 }
 
 /* Navbar */
@@ -599,23 +621,23 @@ button {
   .navbar ul {
     display: flex;
   }
-  
+
   .navbar a {
     color: #fff;
     padding: 0.45rem;
     margin: 0 0.25rem;
   }
-  
+
   .navbar a:hover {
     color: var(--primary-color);
   }
-  
+
   .navbar .welcome span {
     margin-right: 0.6rem;
   }
-  
+
   /* Sidebar */
-   .sidebar {
+  .sidebar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -626,7 +648,7 @@ button {
     top: 5em;
     opacity: 0.9;
     background-color: #343a40;
-}
+  }
 
   .sidebar2 {
     display: flex;
@@ -640,14 +662,14 @@ button {
     opacity: 0.9;
     background-color: #343a40;
   }
-  
+
   /* Landing Page */
   .landing {
     position: relative;
     background: url('./img/showcase.jpg') no-repeat center center/cover;
     height: 100vh;
   }
-  
+
   .landing-inner {
     color: #fff;
     height: 100%;
@@ -694,7 +716,6 @@ button {
       'exp'
       'edu'
       'github';
-      
   }
 
   .profile-about .skills {

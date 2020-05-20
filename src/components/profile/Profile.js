@@ -18,31 +18,31 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
       {profile === null ? (
         <Spinner />
       ) : (
-        <Fragment>
-          <Link to="/profiles" className="btn btn-light">
-            Back To Profiles
+          <Fragment>
+            <Link to="/profiles" className="btn btn-light">
+              Back To Profiles
           </Link>
-         
-          {auth.isAuthenticated &&
-            auth.loading === false &&
-            auth.user._id === profile.user._id && (
-              <Link to="/edit-profile" className="btn btn-dark">
-                Edit Profile
-              </Link>
-            )}
-          <div className="profile-grid my-1">
-            <ProfileTop profile={profile} />
-            <ProfileAbout profile={profile} />
-            
+
             {auth.isAuthenticated &&
-            auth.loading === false &&
-            auth.user._id === profile.user._id && (
-            <FollowUserButton />  
-            )}
-            
-          </div>
-        </Fragment>
-      )}
+              auth.loading === false &&
+              auth.user._id === profile.user._id && (
+                <Link to="/edit-profile" className="btn btn-dark">
+                  Edit Profile
+                </Link>
+              )}
+            <div className="profile-grid my-1">
+              <ProfileTop profile={profile} />
+              <ProfileAbout profile={profile} />
+
+              {auth.isAuthenticated &&
+                auth.loading === false &&
+                auth.user._id === profile.user._id && (
+                  <FollowUserButton />
+                )}
+
+            </div>
+          </Fragment>
+        )}
     </Fragment>
   );
 };
