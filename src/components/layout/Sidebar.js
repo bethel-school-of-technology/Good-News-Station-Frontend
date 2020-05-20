@@ -53,25 +53,23 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   return (
     /* Link to a page with the top articles listed with short discription and cover photos */
-  <div>
+  
     <div className="sidebar" >
-    <nav >
-      <h1>
-        <Link to='/'>
-          Top News of the Week!
-        </Link>
-      </h1>
-      {!loading && (
-        <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
-      )}
-    </nav>
-    </div>
-    <div className="sidebar2" >
-      <div>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      <nav >
+        <h1>
+          <Link to='/'>
+            Top News of the Week!
+          </Link>
+        </h1>
+        {!loading && (
+          <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
+        )}
+      </nav>
+      <div  className="sidebar2">
+        <h1 >Footer</h1>
       </div>
     </div>
-    </div>
+  
 
   
   

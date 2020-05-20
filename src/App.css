@@ -406,6 +406,51 @@ button {
   margin-right: 0.6rem;
 }
 
+  /* Sidebar */
+  .sidebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 25%;
+    z-index: 1;
+    top: 15em; 
+    opacity: 0.9;
+    background-color: #343a40;
+
+}
+
+  .sidebar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    top: 30em; 
+    opacity: 0.9;
+    width: 25%;
+    background-color: #343a40;
+  }
+
+  .sidebarContent {
+    display: flex;
+    top: 10em;
+  }
+
+  .sidebarContainer {
+    display: flex;
+    width: 100%;
+  }
+  .mainContent-Landing {
+  width: 75%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  
+  }
+
 /* Landing Page */
 .landing {
   position: relative;
@@ -612,33 +657,6 @@ button {
   
   .navbar .welcome span {
     margin-right: 0.6rem;
-  }
-  
-  /* Sidebar */
-   .sidebar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.7rem 2rem;
-    position: fixed;
-    z-index: 1;
-    width: 20em;
-    top: 5em;
-    opacity: 0.9;
-    background-color: #343a40;
-}
-
-  .sidebar2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.7rem 2rem;
-    position: fixed;
-    z-index: 1;
-    width: 20em;
-    top: 25em;
-    opacity: 0.9;
-    background-color: #343a40;
   }
   
   /* Landing Page */

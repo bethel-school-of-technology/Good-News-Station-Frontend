@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Routes from './components/routing/Routes';
-import Sidebar from './components/layout/Sidebar';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -24,7 +23,6 @@ const App = () => {
       <Router>
         <Fragment>
           <Navbar />
-          <Sidebar />
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route component={Routes} />
