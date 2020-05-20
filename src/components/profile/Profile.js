@@ -36,7 +36,7 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
             
             {auth.isAuthenticated &&
             auth.loading === false &&
-            auth.user._id === profile.user._id && (
+            auth.user._id != profile.user._id && (
             <FollowUserButton />  
             )}
             
