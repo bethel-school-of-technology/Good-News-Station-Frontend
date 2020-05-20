@@ -68,10 +68,10 @@ const ProfileForm = ({
                     // value={picture}
                     // onChange={onChange}
                     /> */}
-                    <small className="form-text">
+                    {/* <small className="form-text">
                         Choose profile picture
           </small>
-                    <br />
+                    <br /> */}
                     <input
                         type="text"
                         placeholder="Inspirational Quote"
