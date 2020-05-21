@@ -24,8 +24,8 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
         <Link to='/'>#5 Trending</Link>
       </li>
     </ul>
-    
-    
+
+
   );
 
   const guestLinks = (
@@ -50,11 +50,11 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   return (
     /* Link to a page with the top articles listed with short discription and cover photos */
-  
+
     <div className="sidebar" >
       <nav className="sidebarContent">
         <h1>
-          <Link to='/'>
+          <Link to='/GNSpicks'>
             Top News of the Week!
           </Link>
         </h1>
@@ -62,14 +62,14 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
           <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
         )}
       </nav>
-      <div  className="footer">
+      <div className="footer">
         <h1 className="sidebarContent">Footer info goes here</h1>
       </div>
     </div>
-  
 
-  
-  
+
+
+
   );
 };
 
@@ -84,5 +84,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-    { logout }
+  { logout }
 )(Sidebar);
