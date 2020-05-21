@@ -4,9 +4,10 @@ import LandingPosts from "../posts/LandingPosts";
 import Sidebar from "./Sidebar";
 import GNSLogo from "../../img/GoodNewsStation-LOGO.png"
 
+
 const Landing = ({}) => {
   return (
-    <div className="">
+    <div className="container">
         <div className="landing">
           <h1 className="large text-dark">
             Welcome to
@@ -15,7 +16,7 @@ const Landing = ({}) => {
         </div>
 
         {/* HOME PAGE LINKS */}
-<div className="test2">
+        <div className="test2">
         <div className="mainContent-Landing">
         <h1 className="">
             Here is some current Good News to get you started!
@@ -42,6 +43,7 @@ const Landing = ({}) => {
             <LandingPosts />
           </div>
         </div>
+
         <div className="sidebarContent">
           <Sidebar />
         </div>

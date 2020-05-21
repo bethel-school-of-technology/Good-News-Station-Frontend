@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
+import Footer from "./Footer";
 
 
 const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
-    <ul className="text-right">
+    <ul className="text-left">
       <li>
         <Link to='/'>#1 Trending</Link>
       </li>
@@ -29,7 +30,7 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
 
   const guestLinks = (
-    <ul className="text-right">
+    <ul className="text-left">
       <li>
         <Link to='/'>#1 Trending</Link>
       </li>
@@ -65,7 +66,7 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
       </nav>
       </div>
       <div className="footer p-2">
-        <h4 className="">Footer info goes here</h4>
+       <Footer />
       </div>
     </div>
 
