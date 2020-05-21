@@ -14,9 +14,8 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
     <Spinner />
   ) : (
     <Fragment>
-      <h1 className="large text-primary">Posts</h1>
-      <p className="lead">
-        <i className="fas fa-user" /> Welcome to Good News Station
+      <h1 className="large text-primary">All the Good News</h1>
+      <p className="lead">Here you can share some of your own good news and add encouragment to others!
       </p>
 
     <PostFrom />
