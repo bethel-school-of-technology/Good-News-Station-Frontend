@@ -56,7 +56,7 @@ const PostItemLanding = ({
 
 {/* COMMENTS/BUTTON */}
 
-          <Link to={`/posts/${_id}`} className="btn btn-primary">
+          <Link to={`/posts/${_id}`} className="btn btn-primary btnLeft">
             Discussion{" "}
             {comments.length > 0 && (
               <span className="comment-count">{comments.length}</span>

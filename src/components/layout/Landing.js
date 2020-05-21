@@ -1,44 +1,52 @@
 import React, { Fragment, useEffect } from "react";
 import { Link } from "react-router-dom";
 import LandingPosts from "../posts/LandingPosts";
+import Sidebar from "./Sidebar";
+import GNSLogo from "../../img/GoodNewsStation-LOGO.png"
 
-const Landing = ({ }) => {
-
+const Landing = ({}) => {
   return (
-    <section className="container">
-      <div className="text-center">
-        <div className="landingImage">
-          <h1 className="large text-primary">Welcome to</h1>
-          <image />
-          <h1 className="">Here is some current Good News to get you started.</h1>
-          <h4 className="">
-            Ready to start contributing? Create an account or sign in to add a post and or view comments.
-          </h4>
-          </div>
+    <div className="">
+        <div className="landing">
+          <h1 className="large text-dark">
+            Welcome to
+          </h1>
+         <img className="landingLogo" src={GNSLogo}/>
+        </div>
 
         {/* HOME PAGE LINKS */}
-
-          <div className="mainBtns">
-          <h3><Link to="/register" className="btn-Primary">
+<div className="test2">
+        <div className="mainContent-Landing">
+        <h1 className="">
+            Here is some current Good News to get you started!
+          </h1>
+          <h4 className="">
+            Ready to start contributing? Create an account or sign in to add a
+            post and or view comments.
+          </h4>
+          <h3>
+          <div className="mainButtons">
+            <Link to="/register" className="btn-Primary">
               Create an Account
             </Link>
-           <span> | </span> 
+            {" | "}
             <Link to="/login" className="btn-Primary">
               Sign In
             </Link>
-            </h3>
           </div>
+          </h3>
 
-        {/* LIST OF POSTS */}
+          {/* LIST OF POSTS */}
 
-          <Fragment>
-            <div>
-              <LandingPosts />
-            </div>
-          </Fragment>
-
-      </div>
-    </section>
+          <div>
+            <LandingPosts />
+          </div>
+        </div>
+        <div className="sidebarContent">
+          <Sidebar />
+        </div>
+        </div>
+    </div>
   );
 };
 export default Landing;

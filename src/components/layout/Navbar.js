@@ -20,10 +20,13 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         </Link>
       </li>
       <li>
-        <a onClick={logout} href='#!'>
+        <a onClick={logout} href='/login'>
           <i className='fas fa-sign-out-alt' />{' '}
           <span className='hide-sm'>Logout</span>
         </a>
+      </li>
+      <li>
+        <Link to='/gnspicks'>GNSpicks</Link>
       </li>
     </ul>
   );
@@ -39,11 +42,14 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <li>
         <Link to='/login'>Login</Link>
       </li>
+      <li>
+        <Link to='/about'>About</Link> {/*jh about*/}
+      </li>
     </ul>
   );
 
   return (
-    <nav className='navbar bg-dark'>
+    <nav className='navbar bg-light-alt'>
       <h1>
         <Link to='/'>
           Good News Station
@@ -67,5 +73,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-    { logout }
+  { logout }
 )(Navbar);

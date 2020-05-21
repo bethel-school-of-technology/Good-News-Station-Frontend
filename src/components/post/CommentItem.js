@@ -11,7 +11,7 @@ const CommentItem = ({
   auth,
   deleteComment
 }) => (
-  <div className='post bg-light p-1 my-1'>
+  <div className='post p-1 my-1 comments'>
     <div>
       <Link to={`/profile/${user}`}>
         <img className='round-img' src={avatar} alt='' />
@@ -27,8 +27,7 @@ const CommentItem = ({
         <button
           onClick={() => deleteComment(postId, _id)}
           type='button'
-          className='btn btn-danger'
-        >
+          className='btn btn-danger'>
           <i className='fas fa-times' />
         </button>
       )}

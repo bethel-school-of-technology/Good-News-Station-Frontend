@@ -1,8 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { createProfile, getCurrentProfile } from '../../actions/profile';
+import { createProfile, getCurrentProfile, deleteAccount } from '../../actions/profile';
 
 const initialState = {
     location: '',
@@ -13,6 +13,7 @@ const initialState = {
 const ProfileForm = ({
     profile: { profile, loading },
     createProfile,
+    deleteAccount,
     getCurrentProfile,
     history
 }) => {
@@ -40,10 +41,10 @@ const ProfileForm = ({
         bio
     } = formData;
 
-    const onChange = (e) =>
+    const onChange = e =>
         setFormData({ ...formData, [e.target.name]: e.target.value });
 
-    const onSubmit = (e) => {
+    const onSubmit = e => {
         e.preventDefault();
         createProfile(formData, history, profile ? true : false);
     };
@@ -56,6 +57,22 @@ const ProfileForm = ({
       </p>
             <form className="form" onSubmit={onSubmit}>
                 <div className="form-group">
+                    <div>
+                        Go
+                    <a href="https://wordpress.com/log-in?client_id=1854&redirect_to=https%3A%2F%2Fpublic-api.wordpress.com%2Foauth2%2Fauthorize%3Fclient_id%3D1854%26response_type%3Dcode%26blog_id%3D0%26state%3D8c9cbb046effe3ddcb0d8cd9ec4a76c7308d39a7624efae65db95273317d24ff%26redirect_uri%3Dhttps%253A%252F%252Fen.gravatar.com%252Fconnect%252F%253Faction%253Drequest_access_token" target="blank"> Here </a>and use the same email you logged in with, to set/change profile picture using Gravatar.
+                    </div>
+                    <br></br>
+                    {/* <input
+                        type="file"
+                        className="custom-file-input"
+                        id="inputGroupFile01"
+                    // value={picture}
+                    // onChange={onChange}
+                    /> */}
+                    {/* <small className="form-text">
+                        Choose profile picture
+          </small>
+                    <br /> */}
                     <input
                         type="text"
                         placeholder="Inspirational Quote"
@@ -91,6 +108,11 @@ const ProfileForm = ({
                     />
                     <small className="form-text">Tell us a little about yourself</small>
                 </div>
+                <div className="my-2">
+            <button className="btn btn-danger" onClick={() => deleteAccount()}>
+              <i className="fas fa-user-minus" /> Delete My Account
+            </button>
+          </div>
 
                 <input type="submit" className="btn btn-primary my-1" />
                 <Link className="btn btn-light my-1" to="/dashboard">
@@ -104,13 +126,14 @@ const ProfileForm = ({
 ProfileForm.propTypes = {
     createProfile: PropTypes.func.isRequired,
     getCurrentProfile: PropTypes.func.isRequired,
-    profile: PropTypes.object.isRequired
+    profile: PropTypes.object.isRequired,
+    deleteAccount: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
     profile: state.profile
 });
 
-export default connect(mapStateToProps, { createProfile, getCurrentProfile })(
-    withRouter(ProfileForm)
+export default connect(mapStateToProps, { createProfile, getCurrentProfile, deleteAccount })(
+    ProfileForm
 );

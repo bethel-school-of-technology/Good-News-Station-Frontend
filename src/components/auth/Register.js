@@ -95,7 +95,7 @@ var options = {  
   right: '32px', // default: '32px'  
   left: 'unset', // default: 'unset'  
   time: '0.3s', // default: '0.3s'  
-  mixColor: '#fff', // default: '#fff'  
+  mixColor: '#c5c6c7', // default: '#fff'  
   backgroundColor: '#fff',  // default: '#fff'  
   buttonColorDark: '#100f2c',  // default: '#100f2c'  
   buttonColorLight: '#fff', // default: '#fff'  
@@ -103,8 +103,8 @@ var options = {  
   label: '🌓', // default: ''  
   autoMatchOsTheme: true // default: true
 }
-  const darkmode = new Darkmode(options);
-  new Darkmode({ label: '🌓' }).showWidget();
+   const darkmode = new Darkmode(options);
+  new Darkmode({ label: '🌓', backgroundColor: '#f0f0f0', bottom: '90px' }).showWidget();
 // DarkMode End
 
 Register.propTypes = {

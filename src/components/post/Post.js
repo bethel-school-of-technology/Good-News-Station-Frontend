@@ -36,7 +36,7 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
       {/* DISCUSSION ITEMS */}
 
       <Linkify>
-      <div className="comments">
+      <div className="">
         {post.comments.map((comment) => (
           <CommentItem key={comment._id} comment={comment} postId={post._id} />
         ))}
