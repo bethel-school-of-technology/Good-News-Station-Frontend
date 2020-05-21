@@ -1,8 +1,12 @@
-/* Global Styles */
+/* ------ BASE STYLES ------ */
+
 :root {
-  --primary-color: #2f7cff;
-  --dark-color: #011b2b;
-  --light-color: #f4f4f4;
+  --primary-color: #116466;
+  --dark-color: #1f2833;
+  --alt-color1: #379683;
+  --alt-color2: #254e58;
+  --light-color-alt: #f0f0f0;
+  --light-color: #c5c6c7;
   --danger-color: #dc3545;
   --success-color: #28a745;
 }
@@ -17,7 +21,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
+  background-color: var(--light-color-alt);
   color: #333;
 }
 
@@ -34,20 +38,20 @@ img {
   width: 100%;
 }
 
-/* Utilities */
 .container {
   max-width: 1100px;
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
   margin-top: 6rem;
-  margin-bottom: 3rem;
-  /* background-image: url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/98607444_10158272365991506_8025674076552953856_n.jpg?_nc_cat=109&_nc_sid=730e14&_nc_ohc=70GxdJn9oywAX_OfgVe&_nc_ht=scontent-atl3-1.xx&oh=e4a684cae00e14e7fca02c02dc2684da&oe=5EEA0420);
-  background-repeat: no-repeat;
-  background-size: 1000px; */
+  margin-bottom: 3rem;;
+  /* background-color: var(--light-color); */
 }
 
-/* Text Styles*/
+
+
+/* ------ TEXT STYLES ------ */
+
 .x-large {
   font-size: 4rem;
   line-height: 1.2;
@@ -73,15 +77,26 @@ img {
   text-align: left;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-primary {
   color: var(--primary-color);
+}
+
+.text-light {
+  color: var(--light-color);
 }
 
 .text-dark {
   color: var(--dark-color);
 }
 
-/* Padding */
+
+
+/* ------ PADDING ------ */
+
 .p {
   padding: 0.5rem;
 }
@@ -107,7 +122,10 @@ img {
   padding: 3rem 0;
 }
 
-/* Margin */
+
+
+/* ------ MARGINS ------ */
+
 .m {
   margin: 0.5rem;
 }
@@ -133,17 +151,25 @@ img {
   margin: 3rem 0;
 }
 
+
+
+/* ------ BUTTONS ------ */
+
 .btn {
   display: inline-block;
   background: var(--light-color);
   color: #333;
   padding: 0.4rem 1.3rem;
   font-size: 1rem;
-  border: none;
+  border-radius: .5em;
   cursor: pointer;
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+}
+
+.btnLeft {
+  float: left;
 }
 
 .badge {
@@ -177,6 +203,10 @@ img {
 .alert-light {
   background: var(--light-color);
   color: #333;
+}
+
+.bg-light-alt {
+  background-color: var(--light-color-alt);
 }
 
 .btn-dark,
@@ -216,7 +246,6 @@ img {
   opacity: 0.8;
 }
 
-.bg-light,
 .badge-light {
   border: #ccc solid 1px;
 }
@@ -231,7 +260,10 @@ img {
   margin: 1.5rem 0;
 }
 
-/* Overlay */
+
+
+/* ------ OVERLAY ------ */
+
 .dark-overlay {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
@@ -241,7 +273,10 @@ img {
   height: 100%;
 }
 
-/* Forms */
+
+
+/* ------ FORMS ------ */
+
 .form .form-group {
   margin: 1.2rem 0;
 }
@@ -279,22 +314,6 @@ button {
   width: 4rem;
 }
 
-.form .social-input i.fa-twitter {
-  color: #38a1f3;
-}
-.form .social-input i.fa-facebook {
-  color: #3b5998;
-}
-.form .social-input i.fa-instagram {
-  color: #3f729b;
-}
-.form .social-input i.fa-youtube {
-  color: #c4302b;
-}
-.form .social-input i.fa-linkedin {
-  color: #0077b5;
-}
-
 .table th,
 .table td {
   padding: 1rem;
@@ -305,7 +324,11 @@ button {
   background: var(--light-color);
 }
 
-/* Register Page*/
+
+
+
+/* ------ REGISTEWR PAGE ------ */
+
 .smiley-colors {
   width: 100px;
   height: 100px;
@@ -316,7 +339,10 @@ button {
   animation-iteration-count: 2;
 }
 
-/* Flip Images About Page Begin JH */
+
+
+
+/* ------ FLIP IMAGES - JH ------ */
 
 .imgAB {
   width: 300px;
@@ -366,37 +392,10 @@ button {
   transform: rotateY(180deg);
 }
 
-/* Flip Images About Page End JH */
 
-@keyframes matchMe {
-  0% {
-    color: red;
-    left: 0px;
-    top: 0px;
-  }
-  25% {
-    color: yellow;
-    left: 50px;
-    top: 0px;
-  }
-  50% {
-    color: blue;
-    left: 0px;
-    top: 0px;
-  }
-  75% {
-    color: green;
-    left: 50px;
-    top: 0px;
-  }
-  100% {
-    color: #17a2b8;
-    left: 0px;
-    top: 0px;
-  }
-}
 
-/* Navbar */
+/* ------ NAVBAR ------ */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -406,8 +405,7 @@ button {
   z-index: 1;
   width: 100%;
   top: 0;
-  border-bottom: solid 1px var(--primary-color);
-  opacity: 0.9;
+  border-bottom: 1px solid black;
 }
 
 .navbar ul {
@@ -415,7 +413,7 @@ button {
 }
 
 .navbar a {
-  color: #fff;
+  color: var(--dark-color);
   padding: 0.45rem;
   margin: 0 0.25rem;
 }
@@ -428,72 +426,147 @@ button {
   margin-right: 0.6rem;
 }
 
-  /* Sidebar */
-  .sidebar {
-    position: sticky;
-    width: 25%;
-    z-index: 1;
-    margin-top: 10em; 
-    top: 10em;
-    height: 25em;
-    background-color:  #011b2b;
-    opacity: 0.9;
+
+
+/* ------ SIDEBAR & FOOTER ------ */
+
+.sidebar {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 2em 2em;
+  margin-top: 8.5em; 
+  background-color:  #011b2b;
+  opacity: 0.9;
 }
 
-  .footer {
-    position: fixed;
-    z-index: 1;
-    bottom: 0em; 
-    height: 5em;
-    opacity: 0.9;
-    width: 25%;
-    background-color:  #011b2b;
-  }
-
-  .sidebarContent {
-  padding: 1em;
-  }
-
-  .container-s {
-    display: flex;
-    width: 100%;
-  }
-  .mainContent-Landing {
-  width: 75%;
-  margin-top: 6rem;
-  }
-
-/* Landing Page */
-.landing {
-  position: relative;
-  background: url('./img/showcase.jpg') no-repeat center center/cover;
-  height: 100vh;
+.sidebar2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  position: fixed;
+  z-index: 1;
+  width: 20em;
+  top: 25em;
+  opacity: 0.9;
+  background-color: var(--dark-color);
 }
 
-.landing-inner {
-  color: #fff;
-  height: 100%;
-  width: 80%;
-  margin: auto;
+.sidebarContent {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  position: right;
+  width: 25%;
 }
 
-/* Profiles Page */
+.footer {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  /* padding: 1em 2em; */
+  bottom: 0em; 
+  height: 5em;
+  opacity: 0.9;
+  width: 25%;
+  color: var(--light-color);
+  background-color: var(--dark-color);
+}
+
+
+
+/* ------ LANDING PAGE ------ */
+
+.test2 {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.test {
+  background-color: var(--light-color);
+}
+
+.mainContent-Landing {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1em;
+  width: 75%;
+ }
+
+.landing {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 3em;
+  margin-top: 3.5em;
+  flex-direction: column;
+  position: center;
+  background: url('./img/GNS-Primary_Web.jpg') no-repeat center center/cover;
+  height: 30em;
+}
+
+.landingLogo {
+  display: flex;
+  width: 80%;
+  margin: 2em;
+}
+
+/* ------ PROFILE PAGE ------ */
+
 .profile {
   display: grid;
   grid-template-columns: 2fr 4fr 2fr;
   align-items: center;
   grid-gap: 2rem;
-  padding: 1rem;
+  padding: 2rem;
   line-height: 1.8;
-  margin-bottom: 1rem;
+  margin: .5rem;
+  width: 30%;
+
+  grid-template-columns: 1fr;
+  text-align: center;
+  /* grid-template-columns: repeat(auto-fit, 200px); */
+  border-radius: 1rem;
 }
 
-/* Profile Page */
+.profiles {
+display: flex;
+flex-wrap: wrap;
+}
+
+.profile ul {
+  display: none;
+}
+
+.profile-top img,
+.profile img {
+  width: 200px;
+  margin: auto;
+}
+
+.profile-grid {
+  grid-template-areas:
+    'top'
+    'about'
+    'exp'
+    'edu'
+    'github';
+}
+
+.profile-about .skills {
+  flex-direction: column;
+}
+
+.dash-buttons a {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.2rem;
+}
+
+
 .profile-grid {
   display: grid;
   grid-template-areas:
@@ -526,77 +599,33 @@ button {
   color: var(--dark-color);
 }
 
-.profile-about {
-  grid-area: about;
-  text-align: center;
-}
 
-.profile-about .skills {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
 
-.profile-exp {
-  grid-area: exp;
-}
-
-.profile-edu {
-  grid-area: edu;
-}
-
-.profile-exp h2,
-.profile-edu h2 {
-  margin-bottom: 1rem;
-}
-
-.profile-exp > div,
-.profile-edu > div {
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: #ccc 1px dotted;
-}
-
-.profile-exp > div:last-child,
-.profile-edu > div:last-child {
-  border: 0;
-}
-
-.profile-exp p,
-.profile-edu p {
-  margin: 0.5rem 0;
-}
-
-.profile-github {
-  grid-area: github;
-}
-
-.profile-github .repo {
-  display: flex;
-}
-
-.profile-github .repo > div:first-child {
-  flex: 7;
-  flex-basis: 70%;
-}
-
-.profile-github > div:last-child {
-  flex: 3;
-  flex-basis: 20%;
-}
-
-/* Posts Page */
-.post-form .post-form-header {
-  background: var(--primary-color);
-  padding: 0.5rem;
-}
+/* ------ POSTS PAGE ------ */
 
 .post {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-gap: 2rem;
   align-items: center;
+  border-radius: 1rem;
+  background-color: var(--light-color);
+}
+
+.comments {
+  
+  background-color: var(--alt-color1);
+  margin-left: 5em;
+  border-radius: 1rem;
+}
+
+.post a,
+.post button {
+  padding: 0.3rem 0.4rem;
+}
+.post-form .post-form-header {
+  background: var(--primary-color);
+  padding: 0.5rem;
 }
 
 .post > div:first-child {
@@ -624,7 +653,38 @@ button {
   float: right;
 }
 
-/* Mobile Styles */
+
+
+/* ------ MOBILE STYLES & ADJUSTMENTS ------ */
+
+@keyframes matchMe {
+  0% {
+    color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    color: yellow;
+    left: 50px;
+    top: 0px;
+  }
+  50% {
+    color: blue;
+    left: 0px;
+    top: 0px;
+  }
+  75% {
+    color: green;
+    left: 50px;
+    top: 0px;
+  }
+  100% {
+    color: #17a2b8;
+    left: 0px;
+    top: 0px;
+  }
+}
+
 @media (max-width: 700px) {
   .container {
     margin-top: 8rem;
@@ -634,7 +694,7 @@ button {
     display: none;
   }
 
-  /* Text Styles */
+  /* ------ TEXT STYLES ------ */
   .x-large {
     font-size: 3rem;
   }
@@ -645,129 +705,4 @@ button {
 
   .lead {
     font-size: 1rem;
-  }
-
-  /* Navbar */
-  .navbar {
-    display: block;
-    text-align: center;
-  }
-
-  .navbar ul {
-    display: flex;
-  }
-
-  .navbar a {
-    color: #fff;
-    padding: 0.45rem;
-    margin: 0 0.25rem;
-  }
-
-  .navbar a:hover {
-    color: var(--primary-color);
-  }
-
-  .navbar .welcome span {
-    margin-right: 0.6rem;
-  }
-
-  /* Sidebar */
-  .sidebar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.7rem 2rem;
-    position: fixed;
-    z-index: 1;
-    width: 20em;
-    top: 5em;
-    opacity: 0.9;
-    background-color: #343a40;
-  }
-
-  .sidebar2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.7rem 2rem;
-    position: fixed;
-    z-index: 1;
-    width: 20em;
-    top: 25em;
-    opacity: 0.9;
-    background-color: #343a40;
-  }
-
-  /* Landing Page */
-  .landing {
-    position: relative;
-    background: url('./img/showcase.jpg') no-repeat center center/cover;
-    height: 100vh;
-  }
-
-  .landing-inner {
-    color: #fff;
-    height: 100%;
-    width: 80%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .navbar h1 {
-    margin-bottom: 1rem;
-  }
-
-  .navbar .welcome {
-    display: none;
-  }
-
-  /* Profiles Page */
-  .profile {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .profile ul {
-    display: none;
-  }
-
-  /* Profile Page */
-
-  .profile-top img,
-  .profile img {
-    width: 200px;
-    margin: auto;
-  }
-
-  .profile-grid {
-    grid-template-areas:
-      'top'
-      'about'
-      'exp'
-      'edu'
-      'github';
-  }
-
-  .profile-about .skills {
-    flex-direction: column;
-  }
-
-  .dash-buttons a {
-    display: block;
-    width: 100%;
-    margin-bottom: 0.2rem;
-  }
-
-  .post {
-    grid-template-columns: 1fr;
-  }
-  .post a,
-  .post button {
-    padding: 0.3rem 0.4rem;
-  }
-}
+  }}

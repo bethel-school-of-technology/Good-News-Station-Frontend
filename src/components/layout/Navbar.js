@@ -49,7 +49,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
 
   return (
-    <nav className='navbar bg-dark'>
+    <nav className='navbar bg-light-alt'>
       <h1>
         <Link to='/'>
           Good News Station

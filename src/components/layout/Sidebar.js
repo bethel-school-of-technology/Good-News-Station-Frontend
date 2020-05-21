@@ -7,7 +7,7 @@ import { logout } from '../../actions/auth';
 
 const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
-    <ul className="sidebarContent">
+    <ul className="text-right">
       <li>
         <Link to='/'>#1 Trending</Link>
       </li>
@@ -29,7 +29,7 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
 
   const guestLinks = (
-    <ul className="sidebarContent">
+    <ul className="text-right">
       <li>
         <Link to='/'>#1 Trending</Link>
       </li>
@@ -51,8 +51,9 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
   return (
     /* Link to a page with the top articles listed with short discription and cover photos */
 
-    <div className="sidebar" >
-      <nav className="sidebarContent">
+    <div className="" >
+      <div className="sidebar">
+      <nav className="text-center">
         <h1>
           <Link to='/GNSpicks'>
             Top News of the Week!
@@ -62,8 +63,9 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
           <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
         )}
       </nav>
-      <div className="footer">
-        <h1 className="sidebarContent">Footer info goes here</h1>
+      </div>
+      <div className="footer p-2">
+        <h4 className="">Footer info goes here</h4>
       </div>
     </div>
 

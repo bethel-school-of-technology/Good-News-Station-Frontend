@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Moment from "react-moment";
 import { connect } from "react-redux";
 import { addLike, removeLike, deletePost } from "../../actions/post";
+import Linkify from "react-linkify";
 
 const PostItem = ({
   addLike,
@@ -13,13 +14,13 @@ const PostItem = ({
   post: { _id, text, name, avatar, user, likes, comments, date },
   showActions
 }) => (
-    <div class="post bg-white p-1 my-1">
+    <div className="post p-1 my-1">
 
       {/* PROFILE AVATAR */}
 
       <div>
         <Link to={`/profile/${user}`}>
-          <img class="round-img" src={avatar} alt="" />
+          <img className="round-img" src={avatar} alt="" />
           <h4>{name}</h4>
         </Link>
       </div>
@@ -27,8 +28,10 @@ const PostItem = ({
       {/* POST CREATED DATE */}
 
       <div>
-        <p class="my-1">{text}</p>
-        <p class="post-date">
+        <Linkify>
+        <p className="my-1">{text}</p>
+        </Linkify>
+        <p className="post-date">
           Posted on <Moment format="MM/DD/YYYY">{date}</Moment>
         </p>
 
