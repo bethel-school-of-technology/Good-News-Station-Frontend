@@ -7,24 +7,21 @@ import { logout } from '../../actions/auth';
 
 const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
-    <ul>
+    <ul className="sidebarContent">
       <li>
-        <Link to='/'>Profiles</Link>
+        <Link to='/'>#1 Trending</Link>
       </li>
       <li>
-        <Link to='/'>Posts</Link>
+        <Link to='/'>#2 Trending</Link>
       </li>
       <li>
-        <Link to='/'>
-          <i  />{' '}
-          <span >Dashboard</span>
-        </Link>
+        <Link to='/'>#3 Trending</Link>
       </li>
       <li>
-        <a onClick={logout} href='#!'>
-          <i  />{' '}
-          <span >Logout</span>
-        </a>
+        <Link to='/'>#4 Trending</Link>
+      </li>
+      <li>
+        <Link to='/'>#5 Trending</Link>
       </li>
     </ul>
     
@@ -32,7 +29,7 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
 
   const guestLinks = (
-    <ul>
+    <ul className="sidebarContent">
       <li>
         <Link to='/'>#1 Trending</Link>
       </li>
@@ -53,25 +50,23 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   return (
     /* Link to a page with the top articles listed with short discription and cover photos */
-  <div>
+  
     <div className="sidebar" >
-    <nav >
-      <h1>
-        <Link to='/'>
-          Top News of the Week!
-        </Link>
-      </h1>
-      {!loading && (
-        <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
-      )}
-    </nav>
-    </div>
-    <div className="sidebar2" >
-      <div>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      <nav className="sidebarContent">
+        <h1>
+          <Link to='/'>
+            Top News of the Week!
+          </Link>
+        </h1>
+        {!loading && (
+          <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
+        )}
+      </nav>
+      <div  className="footer">
+        <h1 className="sidebarContent">Footer info goes here</h1>
       </div>
     </div>
-    </div>
+  
 
   
   

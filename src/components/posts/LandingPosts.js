@@ -15,7 +15,6 @@ const LandingPosts = ({ getPosts, post: { posts, loading } }) => {
     <Spinner />
   ) : (
     <Fragment>
-      
       <div className="posts">
         {posts.map((post) => (
           <PostItemLanding key={post._id} post={post} />

@@ -428,6 +428,41 @@ button {
   margin-right: 0.6rem;
 }
 
+  /* Sidebar */
+  .sidebar {
+    position: sticky;
+    width: 25%;
+    z-index: 1;
+    margin-top: 10em; 
+    top: 10em;
+    height: 25em;
+    background-color:  #011b2b;
+    opacity: 0.9;
+}
+
+  .footer {
+    position: fixed;
+    z-index: 1;
+    bottom: 0em; 
+    height: 5em;
+    opacity: 0.9;
+    width: 25%;
+    background-color:  #011b2b;
+  }
+
+  .sidebarContent {
+  padding: 1em;
+  }
+
+  .container-s {
+    display: flex;
+    width: 100%;
+  }
+  .mainContent-Landing {
+  width: 75%;
+  margin-top: 6rem;
+  }
+
 /* Landing Page */
 .landing {
   position: relative;
