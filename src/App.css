@@ -408,34 +408,28 @@ button {
 
   /* Sidebar */
   .sidebar {
-    /*display: flex;
-    justify-content: space-between;
-    align-items: center;
-     */
-     position: sticky;
+    position: sticky;
     width: 25%;
     z-index: 1;
-    opacity: 0.9; 
-    background-color: #343a40; 
     margin-top: 10em; 
-
+    top: 10em;
+    height: 25em;
+    background-color:  #011b2b;
+    opacity: 0.9;
 }
 
   .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: fixed;
     z-index: 1;
-    top: 30em; 
+    bottom: 0em; 
+    height: 5em;
     opacity: 0.9;
     width: 25%;
-    background-color: #343a40;
+    background-color:  #011b2b;
   }
 
   .sidebarContent {
-    display: flex;
-    top: 10em;
+  padding: 1em;
   }
 
   .container-s {

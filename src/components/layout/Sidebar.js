@@ -7,24 +7,21 @@ import { logout } from '../../actions/auth';
 
 const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
-    <ul>
+    <ul className="sidebarContent">
       <li>
-        <Link to='/'>Profiles</Link>
+        <Link to='/'>#1 Trending</Link>
       </li>
       <li>
-        <Link to='/'>Posts</Link>
+        <Link to='/'>#2 Trending</Link>
       </li>
       <li>
-        <Link to='/'>
-          <i  />{' '}
-          <span >Dashboard</span>
-        </Link>
+        <Link to='/'>#3 Trending</Link>
       </li>
       <li>
-        <a onClick={logout} href='#!'>
-          <i  />{' '}
-          <span >Logout</span>
-        </a>
+        <Link to='/'>#4 Trending</Link>
+      </li>
+      <li>
+        <Link to='/'>#5 Trending</Link>
       </li>
     </ul>
     
@@ -32,7 +29,7 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
 
   const guestLinks = (
-    <ul>
+    <ul className="sidebarContent">
       <li>
         <Link to='/'>#1 Trending</Link>
       </li>
@@ -55,7 +52,7 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
     /* Link to a page with the top articles listed with short discription and cover photos */
   
     <div className="sidebar" >
-      <nav >
+      <nav className="sidebarContent">
         <h1>
           <Link to='/'>
             Top News of the Week!
@@ -66,7 +63,7 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
         )}
       </nav>
       <div  className="footer">
-        <h1 >Footer</h1>
+        <h1 className="sidebarContent">Footer info goes here</h1>
       </div>
     </div>
   

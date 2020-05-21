@@ -8,7 +8,6 @@ const Landing = ({ }) => {
 
   return (
     <div className="container-s">
-  
       <div className="mainContent-Landing">
         <div className="text-center">
           <div className="">
