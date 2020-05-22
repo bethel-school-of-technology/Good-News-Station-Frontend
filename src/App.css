@@ -1,14 +1,15 @@
 /* ------ BASE STYLES ------ */
 
 :root {
-  --primary-color: #116466;
-  --dark-color: #1f2833;
+  --primary-color: #4879cd;
+  --dark-color: #ffffff;
   --alt-color1: #379683;
-  --alt-color2: #254e58;
-  --light-color-alt: #f0f0f0;
-  --light-color: #c5c6c7;
+  --alt-color2: #1f5c6c;
+  --light-color-alt: #1b2435;
+  --light-color: #ffffff;
   --danger-color: #dc3545;
   --success-color: #28a745;
+  /* background-color: #f4f4f4; */
 }
 
 * {
@@ -312,7 +313,7 @@ button {
   background: var(--light-color);
 }
 
-/* ------ REGISTEWR PAGE ------ */
+/* ------ REGISTER PAGE ------ */
 
 .smiley-colors {
   width: 100px;
