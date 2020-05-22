@@ -21,13 +21,11 @@ const Dashboard = ({
       <p className="lead">
         <i className="fas fa-user" /> Welcome {user && user.name}
       </p>
-      {profile !== null ? (  
-             
+      {profile !== null ? (       
         <Fragment>
-          <DashboardActions key={profile._id} profile={profile} />
-
-        
-        </Fragment>
+          <DashboardActions />
+          {/* key={profile._id} profile={profile} */}
+          </Fragment>
       ) : (
         <Fragment>
           <p>You have not yet setup a profile, please add some info</p>
@@ -51,6 +49,5 @@ const mapStateToProps = (state) => ({
   profile: state.profile
 });
 
-export default connect(mapStateToProps, { getCurrentProfile })(
-  Dashboard
-);
+export default connect(mapStateToProps, { getCurrentProfile })
+(Dashboard);
