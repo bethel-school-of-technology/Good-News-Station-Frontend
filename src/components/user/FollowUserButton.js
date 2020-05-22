@@ -16,7 +16,7 @@ const FollowUserButton = ({
                     <button onClick={() => addFollow(_id)}
                         type='button'
                         className='btn btn-success'>Follow
-                            <span>{following.length > 10 && <span>{following.length}</span>}</span>
+                            {/* <span>{following.length > 0 <span>{following.length} </span>}</span> */}
                     </button>
 
                     <button onClick={() => removeFollow(_id)}
