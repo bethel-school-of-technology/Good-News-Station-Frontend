@@ -1,4 +1,4 @@
-import axios from 'axios';
+import api from '../utils/api';
 import {
     UPDATE_FOLLOW,
     POST_ERROR,
@@ -7,11 +7,11 @@ import {
 ////// ADD FOLLOW
 export const addFollow = id => async dispatch => {
     try {
-        const res = await axios.put(`/api/users/follow/${id}`);
+        const res = await api.put(`/users/follow/${id}`);
 
         dispatch({
             type: UPDATE_FOLLOW,
-            payload: { id, following: res.data }
+            payload: { id, followers: res.data }
         });
     } catch (err) {
         dispatch({
@@ -24,11 +24,11 @@ export const addFollow = id => async dispatch => {
 ////// REMOVE FOLLOW
 export const removeFollow = id => async dispatch => {
     try {
-        const res = await axios.put(`/api/users/unfollow/${id}`);
+        const res = await api.put(`/users/unfollow/${id}`);
 
         dispatch({
             type: UPDATE_FOLLOW,
-            payload: { id, following: res.data }
+            payload: { id, followers: res.data }
         });
     } catch (err) {
         dispatch({

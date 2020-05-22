@@ -10,22 +10,29 @@ const FollowUserButton = ({
     showActions
 }) => (
         <div className='dash-buttons'>
-            
             {showActions && (
                 <Fragment>
-                    <button onClick={() => addFollow(_id)}
+                    <div className='post-likes'>
+                    
+                    
+                  
+                
+                   <button onClick={() => addFollow(_id)}
                         type='button'
                         className='btn btn-success'>Follow
-                            {/* <span>{following.length > 0 <span>{following.length} </span>}</span> */}
                     </button>
 
                     <button onClick={() => removeFollow(_id)}
                         type='button'
                         className='btn btn-danger'>Unfollow
                     </button>
+                    
+                
+
+                    </div>
                 </Fragment>
             )}
-        </div >
+        </div>
     );
 
 FollowUserButton.defaultProps = {

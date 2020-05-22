@@ -33,10 +33,10 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
             <div className="profile-grid my-1">
               <ProfileTop profile={profile} />
               <ProfileAbout profile={profile} />
-
+              {/* <FollowUserButton /> */}
               {auth.isAuthenticated &&
                 auth.loading === false &&
-                auth.user._id === profile.user._id && (
+                auth.user._id !== profile.user._id && (
                   <FollowUserButton />
                 )}
 
