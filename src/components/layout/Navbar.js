@@ -26,7 +26,10 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         </a>
       </li>
       <li>
-        <Link to='/gnspicks'>GNSpicks</Link>
+        <Link to='/gnspicks'>
+          <i className='fas fa-archive' />{' '}
+          <span className='hide-sm'>GNSpicks</span>
+        </Link>
       </li>
     </ul>
   );
