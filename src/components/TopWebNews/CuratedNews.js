@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const CuratedNews = ({ }) => {
+const CuratedNews = () => {
     return (
         <container>
             <div>
