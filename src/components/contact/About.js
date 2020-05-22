@@ -1,8 +1,7 @@
-import React, { Fragment, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
-
-const About = ({ }) => {
+const About = () => {
 
   return (
     <section className="container">
@@ -23,19 +22,12 @@ const About = ({ }) => {
           {/* HOME PAGE LINKS */}
 
           <div className="mainButtons">
-            <a href="https://github.com/CharlesB8" target="_blank">Charles Bartel</a><br />
-            <a href="https://github.com/Lassojeb" target="_blank">Jeb Brant</a><br />
-            <a href="https://github.com/Joshiba26" target="_blank">Joshua Gray</a><br />
-            <a href="https://github.com/jharristech" target="_blank">Justin Harris</a><br />
-
-
-            <a href="https://github.com/nelsonchaves" target="_blank">Nelson Chaves</a><br />
+          <Link to="https://github.com/CharlesB8" target="_blank">Charles Bartel<br /></Link>
+          <Link to="https://github.com/Lassojeb" target="_blank">Jeb Brant<br /></Link>
+          <Link to="https://github.com/Joshiba26" target="_blank">Joshua Gray<br /></Link>
+          <Link to="https://github.com/jharristech" target="_blank">Justin Harris<br /></Link>
+          <Link to="https://github.com/nelsonchaves" target="_blank">Nelson Chaves<br /></Link>
           </div>
-
-
-
-
-
 
           <div class="flip-card centerMe">
             <div class="flip-card-inner">
@@ -44,7 +36,7 @@ const About = ({ }) => {
               </div>
               <div class="flip-card-back">
                 <h1>Joshua Gray</h1>
-                <a href="https://github.com/Joshiba26" target="_blank" class="flipColor">GitHub Page</a><br />
+                <Link to="https://github.com/Joshiba26" target="_blank" class="flipColor">GitHub Page</Link><br />
                 <p>Architect & Engineer</p>
                 <p>We love that guy</p>
               </div>
@@ -60,7 +52,7 @@ const About = ({ }) => {
               </div>
               <div class="flip-card-back">
                 <h1>Nelson Chaves</h1>
-                <a href="https://github.com/Joshiba26" target="_blank" class="flipColor">GitHub Page</a><br />
+                <Link to="https://github.com/Joshiba26" target="_blank" class="flipColor">GitHub Page</Link><br />
                 <p>Developer & Engineer</p>
                 <p>We love that guy</p>
               </div>
@@ -75,7 +67,7 @@ const About = ({ }) => {
               </div>
               <div class="flip-card-back">
                 <h1>Jeb</h1>
-                <a href="https://github.com/Joshiba26" target="_blank" class="flipColor">GitHub Page</a><br />
+                <Link to="https://github.com/Joshiba26" target="_blank" class="flipColor">GitHub Page</Link><br />
                 <p>Artist & Engineer</p>
                 <p>We love that guy</p>
               </div>
