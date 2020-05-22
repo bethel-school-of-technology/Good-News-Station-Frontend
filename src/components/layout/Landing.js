@@ -1,18 +1,18 @@
-import React, { Fragment, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import LandingPosts from "../posts/LandingPosts";
 import Sidebar from "./Sidebar";
 import GNSLogo from "../../img/GoodNewsStation-LOGO.png"
 
 
-const Landing = ({}) => {
+const Landing = () => {
   return (
     <div className="container">
         <div className="landing">
           <h1 className="large text-dark">
             Welcome to
           </h1>
-         <img className="landingLogo" src={GNSLogo}/>
+         <img className="landingLogo" alt="" src={GNSLogo}/>
         </div>
 
         {/* HOME PAGE LINKS */}
