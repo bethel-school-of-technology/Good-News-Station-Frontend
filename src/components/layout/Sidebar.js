@@ -1,3 +1,4 @@
+
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -54,19 +55,19 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
     <div className="" >
       <div className="sidebar">
-      <nav className="text-center">
-        <h1>
-          <Link to='/GNSpicks'>
-            Top News of the Week!
+        <nav className="text-center">
+          <h1>
+            <Link to='/GNSpicks'>
+              Top News of the Week!
           </Link>
-        </h1>
-        {!loading && (
-          <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
-        )}
-      </nav>
+          </h1>
+          {!loading && (
+            <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
+          )}
+        </nav>
       </div>
       <div className="footer p-2">
-       <Footer />
+        <Footer />
       </div>
     </div>
 
