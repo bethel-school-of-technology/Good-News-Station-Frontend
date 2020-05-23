@@ -57,9 +57,7 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <div className="sidebar">
         <nav className="text-center">
           <h1>
-            <Link to='/GNSpicks'>
-              Top News of the Week!
-          </Link>
+            Top News of the Week!
           </h1>
           {!loading && (
             <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>

@@ -7,13 +7,14 @@ const FollowersFollowing = ({
         user: { following, followers }
     }
 }) => {
+
     return (
-        <div class=''>
-            <h1 class='large'>Followers : {followers.length}</h1>
-            <h1 class='large'>Following : {following.length}</h1>
-           
+        <div className=''>
+            <h1 className='large'>Followers : {followers.length}</h1>
+            <h1 className='large'>Following : {following.length}</h1>
+
         </div>
-         
+
     );
 };
 
