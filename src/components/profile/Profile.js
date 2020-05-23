@@ -10,17 +10,16 @@ import FollowUserButton from '../user/FollowUserButton';
 import FollowersFollowing from '../user/FollowersFollowing'
 
 
-const Profile = ({ 
-  getProfileById, 
-  profile: { profile }, 
-  auth, 
+const Profile = ({
+  getProfileById,
+  profile: { profile },
+  auth,
   match,
   // follower_count: { users: {profile.users} }
 }) => {
   useEffect(() => {
     getProfileById(match.params.id);
   }, [getProfileById, match.params.id]);
-
   return (
     <Fragment>
       {profile === null ? (
@@ -42,13 +41,13 @@ const Profile = ({
               <ProfileTop profile={profile} />
               <ProfileAbout profile={profile} />
               <FollowersFollowing profile={profile} />
-              
+
 
               {auth.isAuthenticated &&
                 auth.loading === false &&
                 auth.user._id !== profile.user._id && (
                   <FollowUserButton profile={profile} />
-                
+
                 )}
             </div>
           </Fragment>

@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 const DashboardActions = ({
-  auth: { user },
+    auth
 }) => {
 return (
     <div className='dash-buttons'>
       <Link to='/edit-profile' className='btn btn-light'>
         <i className='fas fa-user-circle text-primary' /> Edit Profile
       </Link>
-      <Link to={`/profile/${user._id}`} className='btn btn-light'>
+      <Link to={`/profile/${auth.user._id}`} className='btn btn-light'>
         <i className='fas fa-user-circle text-primary' /> View Profile
       </Link>
     </div>

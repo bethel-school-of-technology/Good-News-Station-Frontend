@@ -14,18 +14,18 @@ const Dashboard = ({
   useEffect(() => {
     getCurrentProfile();
   }, [getCurrentProfile]);
-console.log('user:', user);
-console.log('profile:', profile);
+// console.log('user:', user);
+// console.log('profile:', profile);
   return (
     <Fragment>
       <h1 className="large text-primary">Dashboard</h1>
       <p className="lead">
         <i className="fas fa-user" /> Welcome {user && user.name}
       </p>
+      
       {profile !== null ? (       
         <Fragment>
-          <DashboardActions />
-          {/* key={profile._id} profile={profile} */}
+          <DashboardActions user={user} />
           </Fragment>
       ) : (
         <Fragment>
