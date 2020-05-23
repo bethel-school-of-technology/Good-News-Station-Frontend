@@ -547,6 +547,11 @@ button {
 
 .profile-about .skills {
   flex-direction: column;
+  border-radius: 1rem;
+}
+
+.profile-about {
+  border-radius: 1rem;
 }
 
 .dash-buttons a {
@@ -572,6 +577,7 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
+  border-radius: 1rem;
 }
 
 .profile-top img {
@@ -640,6 +646,17 @@ button {
 }
 
 /* ------ GNSpicks page ------ */
+.GNSheader {
+  background: var(--primary-color);
+  color: #fff;
+  border: 150px;
+  padding-left: 180px;
+  padding-right: 180px;
+  margin-right: -65px;
+  margin-left: -10px;
+  text-align: center;
+}
+
 .GNScontainer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);

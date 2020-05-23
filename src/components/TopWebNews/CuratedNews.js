@@ -6,9 +6,9 @@ const CuratedNews = () => {
         <container>
 
             <div className="mainContent-Landing">
-                <h1>
-                    Good News Stories
-                </h1>
+                <div className="GNSheader">
+                    <h1 className="GNSh1">User Spotlight Stories??</h1>
+                </div>
             </div>
             <br />
 
@@ -43,7 +43,7 @@ May 20 at 10:00 AM · Public
 Brave two-year-old defies the odds by beating coronavirus while battling leukaemia ❤ -
 “I felt like a failure, the one thing that we’ve been trying to protect him from he caught.
 “After everything that has been publicised regarding Covid and the fact Jackson was classed as clinically extremely vulnerable – we assumed the worst.”
-Full story: https://www.real-fix.com/health/brave-two-year-old-defies-the-odds-by-beating-coronavirus-while-battling-leukaemia/ </p>
+Full story: <a href="https://www.real-fix.com/health/brave-two-year-old-defies-the-odds-by-beating-coronavirus-while-battling-leukaemia">Here</a></p>
                 </div>
             </container >
 
