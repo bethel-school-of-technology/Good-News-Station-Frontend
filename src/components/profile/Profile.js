@@ -7,8 +7,16 @@ import ProfileTop from './ProfileTop';
 import ProfileAbout from './ProfileAbout';
 import { getProfileById } from '../../actions/profile';
 import FollowUserButton from '../user/FollowUserButton';
+import FollowersFollowing from '../user/FollowersFollowing'
 
-const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
+
+const Profile = ({ 
+  getProfileById, 
+  profile: { profile }, 
+  auth, 
+  match,
+  // follower_count: { users: {profile.users} }
+}) => {
   useEffect(() => {
     getProfileById(match.params.id);
   }, [getProfileById, match.params.id]);
@@ -33,13 +41,15 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
             <div className="profile-grid my-1">
               <ProfileTop profile={profile} />
               <ProfileAbout profile={profile} />
-              {/* <FollowUserButton /> */}
+              <FollowersFollowing profile={profile} />
+              
+
               {auth.isAuthenticated &&
                 auth.loading === false &&
                 auth.user._id !== profile.user._id && (
-                  <FollowUserButton />
+                  <FollowUserButton profile={profile} />
+                
                 )}
-
             </div>
           </Fragment>
         )}

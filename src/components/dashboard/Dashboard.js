@@ -14,7 +14,8 @@ const Dashboard = ({
   useEffect(() => {
     getCurrentProfile();
   }, [getCurrentProfile]);
-
+console.log('user:', user);
+console.log('profile:', profile);
   return (
     <Fragment>
       <h1 className="large text-primary">Dashboard</h1>

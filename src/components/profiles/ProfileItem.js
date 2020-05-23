@@ -7,7 +7,7 @@ const ProfileItem = ({
     user: { _id, name, avatar },
     status,
     location
-  }
+  },
 }) => {
   return (
     <div className='profile bg-light'>
@@ -21,6 +21,10 @@ const ProfileItem = ({
         <Link to={`/profile/${_id}`} className='btn btn-primary'>
           View Profile
         </Link>
+        {/* <div style="">
+              <span  style="" className="badge badge-light">Followers : </span> 
+              <span  className="badge badge-light">Following : </span>
+            </div>  */}
       </div>
       
     </div>

@@ -14,6 +14,8 @@ const ProfileTop = ({
             <h1 class='large'>{name}</h1>
             <p class='lead'>"{status}"</p>
             <p>{location && <span>{location}</span>}</p>
+            
+
         </div>
    );
 };
