@@ -15,11 +15,11 @@ const Profile = ({
   profile: { profile },
   auth,
   match,
-  // follower_count: { users: {profile.users} }
 }) => {
   useEffect(() => {
     getProfileById(match.params.id);
   }, [getProfileById, match.params.id]);
+  console.log('profile', profile)
   return (
     <Fragment>
       {profile === null ? (
@@ -40,7 +40,8 @@ const Profile = ({
             <div className="profile-grid my-1">
               <ProfileTop profile={profile} />
               <ProfileAbout profile={profile} />
-              <FollowersFollowing profile={profile} />
+              
+              {profile.followers && <FollowersFollowing profile={profile} />}
 
 
               {auth.isAuthenticated &&

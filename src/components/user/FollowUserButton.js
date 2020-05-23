@@ -45,7 +45,7 @@ FollowUserButton.propTypes = {
     auth: PropTypes.object.isRequired,
     followUser: PropTypes.func.isRequired,
     unfollowUser: PropTypes.func.isRequired,
-    profile: PropTypes.func.isRequired,
+    profile: PropTypes.object.isRequired,
     showActions: PropTypes.bool
 };
 
