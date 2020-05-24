@@ -59,7 +59,7 @@ const ProfileForm = ({
                 <div className="form-group">
                     <div>
                         Go
-                    <a href="https://wordpress.com/log-in?client_id=1854&redirect_to=https%3A%2F%2Fpublic-api.wordpress.com%2Foauth2%2Fauthorize%3Fclient_id%3D1854%26response_type%3Dcode%26blog_id%3D0%26state%3D8c9cbb046effe3ddcb0d8cd9ec4a76c7308d39a7624efae65db95273317d24ff%26redirect_uri%3Dhttps%253A%252F%252Fen.gravatar.com%252Fconnect%252F%253Faction%253Drequest_access_token" target="blank"> Here </a>and use the same email you logged in with, to set/change profile picture using Gravatar.
+                    <a className="bold" href="https://wordpress.com/log-in?client_id=1854&redirect_to=https%3A%2F%2Fpublic-api.wordpress.com%2Foauth2%2Fauthorize%3Fclient_id%3D1854%26response_type%3Dcode%26blog_id%3D0%26state%3D8c9cbb046effe3ddcb0d8cd9ec4a76c7308d39a7624efae65db95273317d24ff%26redirect_uri%3Dhttps%253A%252F%252Fen.gravatar.com%252Fconnect%252F%253Faction%253Drequest_access_token" target="blank"> Here </a>and use the same email you logged in with, to set/change profile picture using Gravatar.
                     </div>
                     <br></br>
                     {/* <input
@@ -109,10 +109,10 @@ const ProfileForm = ({
                     <small className="form-text">Tell us a little about yourself</small>
                 </div>
                 <div className="my-2">
-            <button className="btn btn-danger" onClick={() => deleteAccount()}>
-              <i className="fas fa-user-minus" /> Delete My Account
+                    <button className="btn btn-danger" onClick={() => deleteAccount()}>
+                        <i className="fas fa-user-minus" /> Delete My Account
             </button>
-          </div>
+                </div>
 
                 <input type="submit" className="btn btn-primary my-1" />
                 <Link className="btn btn-light my-1" to="/dashboard">
