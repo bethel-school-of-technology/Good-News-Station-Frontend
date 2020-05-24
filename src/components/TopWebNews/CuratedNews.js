@@ -7,7 +7,7 @@ const CuratedNews = () => {
 
             <div className="mainContent-Landing">
                 <div className="GNSheader">
-                    <h1 className="GNSh1">User Spotlight Stories??</h1>
+                    <h1 className="GNSh1">User Spotlight Stories</h1>
                 </div>
             </div>
             <br />
