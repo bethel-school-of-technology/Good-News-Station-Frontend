@@ -104,7 +104,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 //   autoMatchOsTheme: true // default: true
 // }
 //    const darkmode = new Darkmode(options);
-new Darkmode({ label: '🌓', backgroundColor: '#f0f0f0', bottom: '90px' }).showWidget();
+new Darkmode({ label: '🌓', backgroundColor: '#f0f0f0'}).showWidget();
 // DarkMode End
 
 Register.propTypes = {
