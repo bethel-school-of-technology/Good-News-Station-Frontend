@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Moment from "react-moment";
 import { connect } from "react-redux";
 import Linkify from "react-linkify";
+import { addLike, removeLike } from "../../actions/post";
 
 const PostItemLanding = ({
   addLike,
@@ -12,7 +13,7 @@ const PostItemLanding = ({
   showActions,
 }) => (
   <div className="post bg-light p-1 my-1">
-{/* PROFILE AVATAR */}
+    {/* PROFILE AVATAR */}
 
     <div>
       <Link to={`/profile/${user}`}>
@@ -21,14 +22,12 @@ const PostItemLanding = ({
       </Link>
     </div>
 
-{/* POST CREATED DATE */}
+    {/* POST CREATED DATE */}
 
     <div>
-    
-    <Linkify>
-      <p className="text-left my-1">{text}</p>
+      <Linkify>
+        <p className="text-left my-1">{text}</p>
       </Linkify>
-
 
       <p className="text-left post-date">
         Posted on <Moment format="MM/DD/YYYY">{date}</Moment>
@@ -37,24 +36,49 @@ const PostItemLanding = ({
       {showActions && (
         <Fragment>
 
-{/* LIKE BUTTON */}
+          {/* LIKE BUTTON LINK SAMPLE*/}
 
+          {/* <div className="post-likes"> */}
+          {/* <h4>Was this post helpful?</h4> */}
+
+          {/* <Link to={`/posts`} type="button" className="btn btn-light"> */}
+          {/* <i className="fas fa-thumbs-up" />{" "} */}
+          {/* <span>{likes.length > 0 && <span>{likes.length}</span>}</span> */}
+          {/* </Link> */}
+
+          {/* DISLIKE BUTTON LINK SAMPLE */}
+
+          {/* <Link to={`/posts`} type="button" className="btn btn-light"> */}
+          {/* <i className="fas fa-thumbs-down" /> */}
+          {/* </Link> */}
+          {/* </div> */}
+
+
+          {/* LIKE BUTTON */}
           <div className="post-likes">
             <h4>Was this post helpful?</h4>
 
-            <Link to={`/posts`} type="button" className="btn btn-light">
+            <button
+              onClick={() => addLike(_id)}
+              type="button"
+              className="btn btn-light"
+            >
               <i className="fas fa-thumbs-up" />{" "}
               <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
-            </Link>
+            </button>
 
-{/* DISLIKE BUTTON */}
+            {/* DISLIKE BUTTON */}
 
-            <Link to={`/posts`} type="button" className="btn btn-light">
+            <button
+              onClick={() => removeLike(_id)}
+              type="button"
+              className="btn btn-light"
+            >
               <i className="fas fa-thumbs-down" />
-            </Link>
+            </button>
           </div>
 
-{/* COMMENTS/BUTTON */}
+          {/* COMMENTS/BUTTON */}
 
           <Link to={`/posts/${_id}`} className="btn btn-primary btnLeft">
             Discussion{" "}
@@ -62,7 +86,6 @@ const PostItemLanding = ({
               <span className="comment-count">{comments.length}</span>
             )}
           </Link>
-         
         </Fragment>
       )}
     </div>
@@ -75,6 +98,14 @@ PostItemLanding.defaultProps = {
 
 PostItemLanding.propTypes = {
   post: PropTypes.object.isRequired,
+  addLike: PropTypes.func.isRequired,
+  removeLike: PropTypes.func.isRequired,
 };
 
-export default connect()(PostItemLanding);
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+export default connect(mapStateToProps, { addLike, removeLike })(
+  PostItemLanding
+);

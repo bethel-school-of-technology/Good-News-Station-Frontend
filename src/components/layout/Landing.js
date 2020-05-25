@@ -1,41 +1,52 @@
-import React from "react";
+import React, { Fragment} from "react";
 import { Link } from "react-router-dom";
 import LandingPosts from "../posts/LandingPosts";
 import Sidebar from "./Sidebar";
-import GNSLogo from "../../img/GoodNewsStation-LOGO.png"
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import GNSLogo from "../../img/GoodNewsStation-LOGO_INV.png";
 
+const Landing = ({ auth: { isAuthenticated, loading } }) => {
+  
+  const loggedOutLeft = (
+    <h3 className="loginText">
+      Ready to start contributing? Create an account or sign in to add a post
+      and or view comments.
+    </h3>
+  );
+  
+  const loggedInLeft = <div></div>;
+  
+  const loggedOutRight = (
+    <div className="mainButtons">
+      <Link to="/register" className="btn btn-primary btnLanding">
+        Create Account
+      </Link>
+      <Link to="/login" className="btn btn-primary btnLanding">
+        Sign In
+      </Link>
+    </div>
+  );
+  
+  const loggedInRight = <div className = "mainContent-Landing"></div>;
 
-const Landing = () => {
   return (
     <div className="container">
-        <div className="landing">
-          <h1 className="large text-dark">
-            Welcome to
-          </h1>
-         <img className="landingLogo" alt="" src={GNSLogo}/>
-        </div>
+      <div className="landing">
+        <img className="landingLogo" alt="" src={GNSLogo} />
+        <br />
+        <br />
+        <h2 className="text-light">GOOD NEWS ALL IN ONE PLACE</h2>
+      </div>
 
-        {/* HOME PAGE LINKS */}
-        <div className="test2">
+      {/* HOME PAGE LINKS */}
+      <div className="landingBody">
+        
         <div className="mainContent-Landing">
-        <h1 className="">
-            Here is some current Good News to get you started!
-          </h1>
-          <h4 className="">
-            Ready to start contributing? Create an account or sign in to add a
-            post and or view comments.
-          </h4>
-          <h3>
-          <div className="mainButtons">
-            <Link to="/register" className="btn-Primary">
-              Create an Account
-            </Link>
-            {" | "}
-            <Link to="/login" className="btn-Primary">
-              Sign In
-            </Link>
-          </div>
-          </h3>
+          
+          {!loading && (
+            <Fragment>{isAuthenticated ? loggedInLeft : loggedOutLeft}</Fragment>
+          )}
 
           {/* LIST OF POSTS */}
 
@@ -45,10 +56,24 @@ const Landing = () => {
         </div>
 
         <div className="sidebarContent">
+          
+          {!loading && (
+            <Fragment>{isAuthenticated ? loggedInRight : loggedOutRight}</Fragment>
+          )}
+
           <Sidebar />
         </div>
-        </div>
+      </div>
     </div>
   );
 };
-export default Landing;
+
+Landing.propTypes = {
+  auth: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+export default connect(mapStateToProps)(Landing);
