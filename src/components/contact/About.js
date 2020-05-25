@@ -44,7 +44,9 @@ const About = () => {
                 <img class="imgAB" src="https://avatars0.githubusercontent.com/u/55989066?s=460&u=9f8274d80c3f6bd7849ec8dd4ea22ce0ee0bba34&v=4" alt="Joshua-Grey" />
               </div>
               <div class="flip-card-back">
-                <h1>Joshua Gray</h1>
+              <h2>
+          <a target="_blank" href="https://github.com/Joshiba26">GitHub</a>
+          </h2>
                 <a target="_blank" href="https://github.com/Joshiba26">GitHub Page</a><br />
                 <p>Architect & Engineer</p>
                 <p>We love that guy</p>
@@ -71,7 +73,7 @@ const About = () => {
 
 
 
-           
+
 
           </div>
           
@@ -86,10 +88,12 @@ const About = () => {
                 <img class="imgAB" src="https://avatars1.githubusercontent.com/u/55574734?s=460&v=4" alt="Nelson-Chaves" />
               </div>
               <div class="flip-card-back">
-                <h1>Nelson Chaves</h1>
-                <a target="_blank" href="https://github.com/Joshiba26">GitHub Page</a><br />
-                <p>Architect & Engineer</p>
-                <p>We love that guy</p>
+                <a target="_blank"></a><h1>GitHub
+                  
+                </h1>
+                
+                <p>Engineer</p>
+                <p>Knowledable</p>
               </div>
             </div>
           </div>
@@ -99,14 +103,14 @@ const About = () => {
           <div className="container centerMe">
           <div class="flip-card ">
             <h2>
-          <a target="_blank" href="https://github.com/Joshiba26">Geb Brant</a>
+          <a target="_blank" href="https://github.com/Lassojeb">Geb Brant</a>
           </h2>
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img class="imgAB" src="https://avatars3.githubusercontent.com/u/55933461?s=460&u=0bea4a90c8bc05e19c5048aebfc51e4a6d659cd2&v=4" alt="Joshua-Grey" />
               </div>
               <div class="flip-card-back">
-                <h1>Joshua Gray</h1>
+                <h1>Geb Brant</h1>
                 <a target="_blank" href="https://github.com/Lassojeb">GitHub Page</a><br />
                 <p>Architect & Engineer</p>
                 <p>We love that guy</p>
