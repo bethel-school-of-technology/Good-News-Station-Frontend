@@ -48,7 +48,7 @@ img {
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
-  margin-top: 6rem;
+  margin-top: 7rem;
   margin-bottom: 3rem;
   /* background-color: var(--light-color); */
 }
@@ -151,6 +151,19 @@ img {
 }
 
 /* ------ BUTTONS ------ */
+
+.mainButtons {
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+  align-content: center;
+  justify-content: center;
+}
+
+.btnLanding {
+  text-align: center;
+  margin: .2em;
+}
 
 .btn {
   display: inline-block;
@@ -446,7 +459,7 @@ button {
   width: 100%;
   flex-direction: column;
   padding: 2em 2em;
-  margin-top: 11.7em;
+  /* margin-top: 1rem; */
   border-radius: 1rem;
   background-color: var(--light-color);
   opacity: 0.9;
@@ -491,14 +504,18 @@ button {
 
 /* ------ LANDING PAGE ------ */
 
-.test2 {
+.loginText {
+  height: 4.2rem;
+  margin: .2em;
+  padding: .5rem;
+  justify-content: center;
+  text-align: left;
+}
+
+.landingBody {
   display: flex;
   width: 100%;
   flex-direction: row;
-}
-
-.test {
-  background-color: var(--light-color);
 }
 
 .mainContent-Landing {
@@ -514,18 +531,18 @@ button {
   width: 100%;
   align-items: center;
   justify-content: center;
-  padding: 3em;
-  margin-top: 3.5em;
+  /* padding: 3em; */
+  /* margin-top: 3.5em; */
   flex-direction: column;
   position: center;
-  background: url('./img/GNS-Primary_Web.jpg') no-repeat center center/cover;
+  background: url('./img/GNS-Primary_Web_B2.jpg') no-repeat center center/cover;
   height: 30em;
 }
 
 .landingLogo {
   display: flex;
   width: 80%;
-  margin: 2em;
+  /* margin: 2em; */
 }
 
 /* ------ PROFILE PAGE ------ */
