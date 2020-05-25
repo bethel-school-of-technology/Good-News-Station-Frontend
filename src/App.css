@@ -330,6 +330,24 @@ button {
 }
 
 /* ------ FLIP IMAGES - JH ------ */
+.flex-gird {
+  display: flex;
+}
+.col {
+  flex: 1;
+}
+@media (max-width: 400px) {
+  .flex-grid {
+    display: block;
+  }
+}
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-grid-thirds .col {
+  width: 32%;
+}
 
 .imgAB {
   width: 300px;
@@ -344,7 +362,10 @@ button {
   height: 300px;
   perspective: 1000px;
 }
-
+.centerMe {
+  display: flex;
+  justify-content: center;
+}
 .flip-card-inner {
   position: relative;
   width: 100%;
