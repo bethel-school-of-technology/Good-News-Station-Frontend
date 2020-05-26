@@ -1,10 +1,10 @@
-
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
-import Footer from "./Footer";
+import Footer from './Footer';
+import Spotlight from './Spotlight'
 
 
 const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
@@ -57,12 +57,15 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <div className="sidebar">
         <nav className="text-center">
           <h1>
-            Top News of the Week!
+            Top News of the Week
           </h1>
           {!loading && (
             <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
           )}
         </nav>
+      </div>
+      <div className="footer p-2">
+        <Spotlight />
       </div>
       <div className="footer p-2">
         <Footer />

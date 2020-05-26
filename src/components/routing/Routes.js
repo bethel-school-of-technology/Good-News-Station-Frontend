@@ -11,8 +11,12 @@ import Posts from '../posts/Posts';
 import Post from '../post/Post';
 import NotFound from '../layout/NotFound';
 import PrivateRoute from '../routing/PrivateRoute';
-import About from '../contact/About'
-import CuratedNews from '../TopWebNews/CuratedNews'
+import About from '../contact/About';
+import CuratedNews from '../TopWebNews/CuratedNews';
+import UserSpotlight_1 from '../user-spotlight/UserSpotlight_1'
+import UserSpotlight_2 from '../user-spotlight/UserSpotlight_2'
+import UserSpotlight_3 from '../user-spotlight/UserSpotlight_3'
+import UserSpotlight_4 from '../user-spotlight/UserSpotlight_4'
 
 const Routes = props => {
   return (
@@ -21,6 +25,10 @@ const Routes = props => {
       <Switch>
         <Route exact path="/register" component={Register} />
         <Route exact path='/gnspicks' component={CuratedNews} />
+        <Route exact path='/UserSpotlight_1' component={UserSpotlight_1} />
+        <Route exact path='/UserSpotlight_2' component={UserSpotlight_2} />
+        <Route exact path='/UserSpotlight_3' component={UserSpotlight_3} />
+        <Route exact path='/UserSpotlight_4' component={UserSpotlight_4} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/profiles" component={Profiles} />
         <Route exact path="/profile/:id" component={Profile} />

@@ -25,12 +25,12 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           <span className='hide-sm'>Logout</span>
         </a>
       </li>
-      <li>
+      {/* <li>
         <Link to='/gnspicks'>
           <i className='fas fa-archive' />{' '}
           <span className='hide-sm'>GNSpicks</span>
         </Link>
-      </li>
+      </li> */}
     </ul>
   );
 

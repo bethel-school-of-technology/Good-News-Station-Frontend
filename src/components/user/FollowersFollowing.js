@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from "prop-types";
 
 
@@ -9,12 +9,12 @@ const FollowersFollowing = ({
 }) => {
 
     return (
-        <div className=''>
-            <h1 className='large'>Followers : {followers.length}</h1>
-            <h1 className='large'>Following : {following.length}</h1>
-
+        <div className='profile-about bg-light p-2'>
+                <Fragment>
+                    <h2 className='text-primary'>Followers : {followers.length}</h2>
+                    <h2 className='text-primary'>Following : {following.length}</h2>
+                </Fragment>
         </div>
-
     );
 };
 

@@ -496,7 +496,6 @@ button {
   height: 15em;
   opacity: 0.9;
   /* width: 100%; */
-  color: var(--light-color);
   border-radius: 1rem;
   background-color: var(--light-color);
   border: rgb(172, 172, 172) solid 1px;

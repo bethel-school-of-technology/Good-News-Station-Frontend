@@ -25,7 +25,7 @@ const Dashboard = ({
       
       {profile !== null ? (       
         <Fragment>
-          <DashboardActions user={user} />
+          <DashboardActions profile={profile} />
           </Fragment>
       ) : (
         <Fragment>

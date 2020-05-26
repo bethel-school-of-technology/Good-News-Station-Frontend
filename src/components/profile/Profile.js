@@ -41,7 +41,7 @@ const Profile = ({
               <ProfileTop profile={profile} />
               <ProfileAbout profile={profile} />
               
-              {profile.followers && <FollowersFollowing profile={profile} />}
+              {profile.user.followers && <FollowersFollowing profile={profile} />}
 
 
               {auth.isAuthenticated &&
