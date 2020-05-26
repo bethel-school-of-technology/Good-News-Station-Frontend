@@ -15,7 +15,7 @@ const ProfileItem = ({
       <div>
         <h2>{name}</h2>
         <p>
-          {status} 
+          {status}
         </p>
         <p className='my-1'>{location && <span>{location}</span>}</p>
         <Link to={`/profile/${_id}`} className='btn btn-primary'>
@@ -26,7 +26,7 @@ const ProfileItem = ({
               <span  className="badge badge-light">Following : </span>
             </div>  */}
       </div>
-      
+
     </div>
   );
 };

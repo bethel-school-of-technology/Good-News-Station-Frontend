@@ -762,6 +762,17 @@ button {
   }
 }
 
+@media (max-width: 900px) {
+  .profiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile {
+    width: auto;
+  }
+}
+
 @media (max-width: 700px) {
   .container {
     margin-top: 8rem;
@@ -790,14 +801,7 @@ button {
   }
 }
 
-@media (max-width: 900px) {
-  .profiles {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .profiles {
     display: block;
   }
