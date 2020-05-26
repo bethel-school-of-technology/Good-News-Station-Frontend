@@ -155,14 +155,14 @@ img {
 .mainButtons {
   display: flex;
   flex-direction: column;
-  padding: .5rem;
+  padding: 0.5rem;
   align-content: center;
   justify-content: center;
 }
 
 .btnLanding {
   text-align: center;
-  margin: .2em;
+  margin: 0.2em;
 }
 
 .btn {
@@ -505,8 +505,8 @@ button {
 
 .loginText {
   height: 4.2rem;
-  margin: .2em;
-  padding: .5rem;
+  margin: 0.2em;
+  padding: 0.5rem;
   justify-content: center;
   text-align: left;
 }
@@ -782,5 +782,10 @@ button {
 
   .lead {
     font-size: 1rem;
+  }
+
+  .profiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
