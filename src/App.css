@@ -460,7 +460,7 @@ button {
   flex-direction: column;
   padding: 2em 2em;
   /* margin-top: 1rem; */
-  border-radius: 1rem;
+  border-radius: 0.4rem;
   background-color: var(--light-color);
   opacity: 0.9;
   border: rgb(172, 172, 172) solid 1px;
@@ -496,7 +496,7 @@ button {
   height: 15em;
   opacity: 0.9;
   /* width: 100%; */
-  border-radius: 1rem;
+  border-radius: 0.4rem;
   background-color: var(--light-color);
   border: rgb(172, 172, 172) solid 1px;
 }
@@ -559,7 +559,7 @@ button {
   grid-template-columns: 1fr;
   text-align: center;
   /* grid-template-columns: repeat(auto-fit, 200px); */
-  border-radius: 1rem;
+  border-radius: 0.4rem;
 }
 
 .profiles {
@@ -588,11 +588,11 @@ button {
 
 .profile-about .skills {
   flex-direction: column;
-  border-radius: 1rem;
+  border-radius: 0.4rem;
 }
 
 .profile-about {
-  border-radius: 1rem;
+  border-radius: 0.4rem;
 }
 
 .dash-buttons a {
@@ -618,7 +618,7 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-radius: 1rem;
+  border-radius: 0.4rem;
 }
 
 .profile-top img {
@@ -641,7 +641,7 @@ button {
   grid-template-columns: 1fr 4fr;
   grid-gap: 2rem;
   align-items: center;
-  border-radius: 1rem;
+  border-radius: 0.4rem;
   background-color: var(--light-color);
   border: rgb(172, 172, 172) solid 1px;
 }
@@ -649,7 +649,7 @@ button {
 .comments {
   background-color: var(--alt-color1);
   margin-left: 5em;
-  border-radius: 1rem;
+  border-radius: 0.4rem;
 }
 
 .post a,
