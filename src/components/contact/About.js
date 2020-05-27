@@ -18,7 +18,6 @@ const About = () => {
             Below is our team of
            </h2>
 
-
           {/* HOME PAGE LINKS */}
 
           <div className="mainButtons">
@@ -32,37 +31,28 @@ const About = () => {
           
 
         <div className="container centerMe">
-
-        <div class="flex-grid">
-  <div class="col">
-    <div class="flip-card ">
-            <h2>
-          <a target="_blank" href="https://github.com/Joshiba26">Joshua Gray</a>
-          </h2>
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img class="imgAB" src="https://avatars0.githubusercontent.com/u/55989066?s=460&u=9f8274d80c3f6bd7849ec8dd4ea22ce0ee0bba34&v=4" alt="Joshua-Grey" />
-              </div>
-              <div class="flip-card-back">
-              <h2>
-          <a target="_blank" href="https://github.com/Joshiba26">GitHub</a>
-          </h2>
-                <a target="_blank" href="https://github.com/Joshiba26">GitHub Page</a><br />
+          <div class="flex-grid">
+            <div class="col">
+              <div class="flip-card ">
+                <h2>
+                <Link to="https://github.com/Joshiba26" target="_blank">Joshua Gray</Link>
+                </h2>
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img class="imgAB" src="https://avatars0.githubusercontent.com/u/55989066?s=460&u=9f8274d80c3f6bd7849ec8dd4ea22ce0ee0bba34&v=4" alt="Joshua-Grey" />
+                    </div>
+                      <div class="flip-card-back">
+                        <h2>
+                        <Link to="https://github.com/Joshiba26" target="_blank">Joshua Gray</Link>
+                        </h2>
+                        <Link to="https://github.com/Joshiba26" target="_blank">Github Page<br /></Link>
                 <p>Architect & Engineer</p>
                 <p>We love that guy</p>
               </div>
             </div>
           </div>
     </div>
-
-
-
   <div class="col"></div>
-
-
-
-
-  
   <div class="col"></div>
 </div>
 
@@ -76,21 +66,19 @@ const About = () => {
 
 
           </div>
-          
           <div className="container centerMe">
-            
           <div class="flip-card ">
           <h2>
-          <a target="_blank" href="https://github.com/nelsonchaves">Nelson Chaves</a>
+          <Link to="https://github.com/nelsonchaves" target="_blank">Nelson Chaves</Link>
           </h2>
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img class="imgAB" src="https://avatars1.githubusercontent.com/u/55574734?s=460&v=4" alt="Nelson-Chaves" />
               </div>
               <div class="flip-card-back">
-                <a target="_blank"></a><h1>GitHub
+              <Link to="https://github.com/nelsonchaves" target="_blank">Github</Link>
                   
-                </h1>
+                
                 
                 <p>Engineer</p>
                 <p>Knowledable</p>
@@ -103,7 +91,7 @@ const About = () => {
           <div className="container centerMe">
           <div class="flip-card ">
             <h2>
-          <a target="_blank" href="https://github.com/Lassojeb">Geb Brant</a>
+            <Link to="https://github.com/Lassojeb" target="_blank">Jeb Brant</Link>
           </h2>
             <div class="flip-card-inner">
               <div class="flip-card-front">
@@ -111,7 +99,7 @@ const About = () => {
               </div>
               <div class="flip-card-back">
                 <h1>Geb Brant</h1>
-                <a target="_blank" href="https://github.com/Lassojeb">GitHub Page</a><br />
+                <Link to="https://github.com/Lassojeb" target="_blank">Jeb Brant<br /></Link>
                 <p>Architect & Engineer</p>
                 <p>We love that guy</p>
               </div>
