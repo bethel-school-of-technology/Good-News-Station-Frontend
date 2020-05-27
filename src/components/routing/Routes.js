@@ -12,6 +12,7 @@ import Post from '../post/Post';
 import NotFound from '../layout/NotFound';
 import PrivateRoute from '../routing/PrivateRoute';
 import About from '../contact/About';
+import Contact from '../contact/Contact';
 import CuratedNews from '../TopWebNews/CuratedNews';
 import UserSpotlight_1 from '../user-spotlight/UserSpotlight_1'
 import UserSpotlight_2 from '../user-spotlight/UserSpotlight_2'
@@ -32,7 +33,8 @@ const Routes = props => {
         <Route exact path="/login" component={Login} />
         <Route exact path="/profiles" component={Profiles} />
         <Route exact path="/profile/:id" component={Profile} />
-        <Route exact path="/about" component={About} />  {/*jh about */}
+        <Route exact path="/about" component={About} />
+        <Route exact path="/contact" component={Contact} />
         <PrivateRoute exact path="/dashboard" component={Dashboard} />
         <PrivateRoute exact path="/create-profile" component={ProfileForm} />
         <PrivateRoute exact path="/edit-profile" component={ProfileForm} />

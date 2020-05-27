@@ -21,7 +21,7 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 users: state.users.map(user =>
-                    user._id === payload.id ? { ...user, following: payload.following } : user
+                    user._id === payload.id ? { ...user, followers: payload.followers } : user
                 ),
                 loading: false
             };

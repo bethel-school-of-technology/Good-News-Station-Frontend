@@ -28,11 +28,10 @@ export const getCurrentProfile = () => async dispatch => {
 
 // Get all profiles
 export const getProfiles = () => async dispatch => {
-  dispatch({ type: CLEAR_PROFILE });
+  // dispatch({ type: CLEAR_PROFILE });
 
   try {
     const res = await api.get('/profile');
-
     dispatch({
       type: GET_PROFILES,
       payload: res.data
@@ -49,7 +48,6 @@ export const getProfiles = () => async dispatch => {
 export const getProfileById = userId => async dispatch => {
   try {
     const res = await api.get(`/profile/user/${userId}`);
-console.log(res);
     dispatch({
       type: GET_PROFILE,
       payload: res.data
