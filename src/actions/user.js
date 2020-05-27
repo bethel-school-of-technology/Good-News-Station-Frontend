@@ -1,39 +1,56 @@
-import axios from 'axios';
+import api from '../utils/api';
 import {
     UPDATE_FOLLOW,
-    POST_ERROR,
+    FOLLOW_ERROR,
+    GET_USER,
+    USER_ERROR
 } from './types';
 
 ////// ADD FOLLOW
-export const addFollow = id => async dispatch => {
+export const followUser = id => async dispatch => {
     try {
-        const res = await axios.put(`/api/users/follow/${id}`);
+        const res = await api.put(`/users/follow/${id}`);
 
         dispatch({
             type: UPDATE_FOLLOW,
-            payload: { id, following: res.data }
+            payload: { id, followers: res.data }
         });
     } catch (err) {
         dispatch({
-            type: POST_ERROR,
+            type: FOLLOW_ERROR,
             payload: { msg: err.response.statusText, status: err.response.status }
         });
     }
 };
 
 ////// REMOVE FOLLOW
-export const removeFollow = id => async dispatch => {
+export const unfollowUser = id => async dispatch => {
     try {
-        const res = await axios.put(`/api/users/unfollow/${id}`);
-
+        const res = await api.put(`/users/unfollow/${id}`);
         dispatch({
             type: UPDATE_FOLLOW,
-            payload: { id, following: res.data }
+            payload: { id, followers: res.data }
         });
     } catch (err) {
         dispatch({
-            type: POST_ERROR,
+            type: USER_ERROR,
             payload: { msg: err.response.statusText, status: err.response.status }
         });
     }
 };
+
+// Get user by ID
+export const getUserById = userId => async dispatch => {
+    try {
+      const res = await api.get(`/users/${userId}`);
+      dispatch({
+        type: GET_USER,
+        payload: res.data
+      });
+    } catch (err) {
+      dispatch({
+        type: USER_ERROR,
+        payload: { msg: err.response.statusText, status: err.response.status }
+      });
+    }
+  };

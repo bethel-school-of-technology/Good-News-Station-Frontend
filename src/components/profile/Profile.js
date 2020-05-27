@@ -7,12 +7,20 @@ import ProfileTop from './ProfileTop';
 import ProfileAbout from './ProfileAbout';
 import { getProfileById } from '../../actions/profile';
 import FollowUserButton from '../user/FollowUserButton';
+import FollowersFollowing from '../user/FollowersFollowing';
+import { getProfiles } from '../../actions/profile';
 
-const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
+
+const Profile = ({
+  getProfileById,
+  getProfiles,
+  profile: { profile },
+  auth,
+  match,
+}) => {
   useEffect(() => {
     getProfileById(match.params.id);
   }, [getProfileById, match.params.id]);
-
   return (
     <Fragment>
       {profile === null ? (
@@ -26,7 +34,7 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
             {auth.isAuthenticated &&
               auth.loading === false &&
               auth.user._id === profile.user._id && (
-                <Link to="/edit-profile" className="btn btn-dark">
+                <Link to="/edit-profile" className="btn btn-light">
                   Edit Profile
                 </Link>
               )}
@@ -34,12 +42,15 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
               <ProfileTop profile={profile} />
               <ProfileAbout profile={profile} />
 
+              {profile.user.followers && <FollowersFollowing profile={profile} />}
+
+
               {auth.isAuthenticated &&
                 auth.loading === false &&
-                auth.user._id === profile.user._id && (
-                  <FollowUserButton />
-                )}
+                auth.user._id !== profile.user._id && (
+                  <FollowUserButton profile={profile} getProfiles={getProfiles} />
 
+                )}
             </div>
           </Fragment>
         )}
@@ -49,6 +60,7 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
 
 Profile.propTypes = {
   getProfileById: PropTypes.func.isRequired,
+  getProfiles: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired
 };
@@ -58,4 +70,7 @@ const mapStateToProps = (state) => ({
   auth: state.auth
 });
 
-export default connect(mapStateToProps, { getProfileById })(Profile);
+export default connect(
+  mapStateToProps,
+  { getProfileById, getProfiles }
+)(Profile);

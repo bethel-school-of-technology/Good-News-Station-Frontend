@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <Fragment>
       <nav className="nav-sidebar">
-          <h5>
+          <h4>
             <ul className="trending">
               <li>
                 <Link to='/'>Top Posts</Link>
@@ -23,8 +23,9 @@ const Footer = () => {
                 <Link to='/'>Contact Us</Link>
               </li>
             </ul>
-            </h5>
-            <h4 className="">The Good News Station © 2020. All rights reserved</h4>
+            </h4>
+            <br />
+            <h5 className="">The Good News Station © 2020. All rights reserved</h5>
           </nav>
     </Fragment>
   );

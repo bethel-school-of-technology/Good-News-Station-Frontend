@@ -28,52 +28,97 @@ const About = () => {
           <Link to="https://github.com/jharristech" target="_blank">Justin Harris<br /></Link>
           <Link to="https://github.com/nelsonchaves" target="_blank">Nelson Chaves<br /></Link>
           </div>
+          
+          
 
-          <div class="flip-card centerMe">
+        <div className="container centerMe">
+
+        <div class="flex-grid">
+  <div class="col">
+    <div class="flip-card ">
+            <h2>
+          <a target="_blank" href="https://github.com/Joshiba26">Joshua Gray</a>
+          </h2>
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img class="imgAB" src="https://avatars0.githubusercontent.com/u/55989066?s=460&u=9f8274d80c3f6bd7849ec8dd4ea22ce0ee0bba34&v=4" alt="Joshua-Grey" />
               </div>
               <div class="flip-card-back">
-                <h1>Joshua Gray</h1>
-                <Link to="https://github.com/Joshiba26" target="_blank" class="flipColor">GitHub Page</Link><br />
+              <h2>
+          <a target="_blank" href="https://github.com/Joshiba26">GitHub</a>
+          </h2>
+                <a target="_blank" href="https://github.com/Joshiba26">GitHub Page</a><br />
                 <p>Architect & Engineer</p>
                 <p>We love that guy</p>
               </div>
             </div>
           </div>
-          <br />
+    </div>
 
 
-          <div class="flip-card centerMe">
+
+  <div class="col"></div>
+
+
+
+
+  
+  <div class="col"></div>
+</div>
+
+
+           
+
+
+
+
+
+
+
+          </div>
+          
+          <div className="container centerMe">
+            
+          <div class="flip-card ">
+          <h2>
+          <a target="_blank" href="https://github.com/nelsonchaves">Nelson Chaves</a>
+          </h2>
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img class="imgAB" src="https://avatars1.githubusercontent.com/u/55574734?s=460&v=4" alt="Nelson" />
+                <img class="imgAB" src="https://avatars1.githubusercontent.com/u/55574734?s=460&v=4" alt="Nelson-Chaves" />
               </div>
               <div class="flip-card-back">
-                <h1>Nelson Chaves</h1>
-                <Link to="https://github.com/Joshiba26" target="_blank" class="flipColor">GitHub Page</Link><br />
-                <p>Developer & Engineer</p>
+                <a target="_blank"></a><h1>GitHub
+                  
+                </h1>
+                
+                <p>Engineer</p>
+                <p>Knowledable</p>
+              </div>
+            </div>
+          </div>
+
+          </div>
+          
+          <div className="container centerMe">
+          <div class="flip-card ">
+            <h2>
+          <a target="_blank" href="https://github.com/Lassojeb">Geb Brant</a>
+          </h2>
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img class="imgAB" src="https://avatars3.githubusercontent.com/u/55933461?s=460&u=0bea4a90c8bc05e19c5048aebfc51e4a6d659cd2&v=4" alt="Joshua-Grey" />
+              </div>
+              <div class="flip-card-back">
+                <h1>Geb Brant</h1>
+                <a target="_blank" href="https://github.com/Lassojeb">GitHub Page</a><br />
+                <p>Architect & Engineer</p>
                 <p>We love that guy</p>
               </div>
             </div>
           </div>
-          <br />
 
-          <div class="flip-card centerMe">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img class="imgAB" src="https://avatars3.githubusercontent.com/u/55933461?s=460&u=0bea4a90c8bc05e19c5048aebfc51e4a6d659cd2&v=4" alt="jeb" />
-              </div>
-              <div class="flip-card-back">
-                <h1>Jeb</h1>
-                <Link to="https://github.com/Joshiba26" target="_blank" class="flipColor">GitHub Page</Link><br />
-                <p>Artist & Engineer</p>
-                <p>We love that guy</p>
-              </div>
-            </div>
           </div>
-          <br />
 
 
 

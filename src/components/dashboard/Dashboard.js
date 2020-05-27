@@ -14,20 +14,19 @@ const Dashboard = ({
   useEffect(() => {
     getCurrentProfile();
   }, [getCurrentProfile]);
-
+// console.log('user:', user);
+// console.log('profile:', profile);
   return (
     <Fragment>
       <h1 className="large text-primary">Dashboard</h1>
       <p className="lead">
         <i className="fas fa-user" /> Welcome {user && user.name}
       </p>
-      {profile !== null ? (  
-             
+      
+      {profile !== null ? (       
         <Fragment>
-          <DashboardActions key={profile._id} profile={profile} />
-
-        
-        </Fragment>
+          <DashboardActions profile={profile} />
+          </Fragment>
       ) : (
         <Fragment>
           <p>You have not yet setup a profile, please add some info</p>
@@ -51,6 +50,5 @@ const mapStateToProps = (state) => ({
   profile: state.profile
 });
 
-export default connect(mapStateToProps, { getCurrentProfile })(
-  Dashboard
-);
+export default connect(mapStateToProps, { getCurrentProfile })
+(Dashboard);
