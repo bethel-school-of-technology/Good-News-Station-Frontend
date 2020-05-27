@@ -13,7 +13,7 @@ export const followUser = id => async dispatch => {
 
         dispatch({
             type: UPDATE_FOLLOW,
-            payload: { id, following: res.data }
+            payload: { id, followers: res.data }
         });
     } catch (err) {
         dispatch({
@@ -27,10 +27,9 @@ export const followUser = id => async dispatch => {
 export const unfollowUser = id => async dispatch => {
     try {
         const res = await api.put(`/users/unfollow/${id}`);
-
         dispatch({
             type: UPDATE_FOLLOW,
-            payload: { id, following: res.data }
+            payload: { id, followers: res.data }
         });
     } catch (err) {
         dispatch({
@@ -44,7 +43,6 @@ export const unfollowUser = id => async dispatch => {
 export const getUserById = userId => async dispatch => {
     try {
       const res = await api.get(`/users/${userId}`);
-  
       dispatch({
         type: GET_USER,
         payload: res.data
