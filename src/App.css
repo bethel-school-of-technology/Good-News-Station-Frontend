@@ -479,6 +479,19 @@ button {
   background-color: var(--dark-color);
 }
 
+.sidebar3 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 2em 2em;
+  /* margin-top: 1rem; */
+  border-radius: 0.4rem;
+  background-color: var(--light-color);
+  opacity: 0.9;
+  border: rgb(172, 172, 172) solid 1px;
+  margin-top: 1rem;
+}
+
 .sidebarContent {
   display: flex;
   flex-direction: column;
@@ -771,6 +784,10 @@ button {
   .profile {
     width: auto;
   }
+
+  .landingBody {
+    width: auto;
+  }
 }
 
 @media (max-width: 700px) {
@@ -799,10 +816,26 @@ button {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+  .landingBody {
+    width: auto;
+  }
 }
 
 @media (max-width: 600px) {
   .profiles {
+    display: block;
+  }
+
+  .sidebar3 {
+    display: block;
+    text-size-adjust: auto;
+    width: auto;
+  }
+  .landingBody {
+    font-size: smaller;
+    display: block;
+  }
+  mainContent-Landing {
     display: block;
   }
 }
