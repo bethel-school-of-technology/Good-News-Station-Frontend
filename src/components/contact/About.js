@@ -17,19 +17,7 @@ const About = () => {
           <h2>
             Below is our team of
            </h2>
-
-          {/* HOME PAGE LINKS */}
-
-          <div className="mainButtons">
-          <Link to="https://github.com/CharlesB8" target="_blank">Charles Bartel<br /></Link>
-          <Link to="https://github.com/Lassojeb" target="_blank">Jeb Brant<br /></Link>
-          <Link to="https://github.com/Joshiba26" target="_blank">Joshua Gray<br /></Link>
-          <Link to="https://github.com/jharristech" target="_blank">Justin Harris<br /></Link>
-          <Link to="https://github.com/nelsonchaves" target="_blank">Nelson Chaves<br /></Link>
-          </div>
-          
-          
-
+{/* Joshua About */}
         <div className="container centerMe">
           <div class="flex-grid">
             <div class="col">
@@ -55,16 +43,7 @@ const About = () => {
   <div class="col"></div>
   <div class="col"></div>
 </div>
-
-
-           
-
-
-
-
-
-
-
+{/* Nelson About */}
           </div>
           <div className="container centerMe">
           <div class="flip-card ">
@@ -77,17 +56,32 @@ const About = () => {
               </div>
               <div class="flip-card-back">
               <Link to="https://github.com/nelsonchaves" target="_blank">Github</Link>
-                  
-                
-                
                 <p>Engineer</p>
                 <p>Knowledgeable</p>
               </div>
             </div>
           </div>
-
           </div>
-          
+{/* Justin About */}
+<div className="container centerMe">
+          <div class="flip-card ">
+            <h2>
+            <Link to="https://github.com/jharristech" target="_blank">Justin Harris</Link>
+          </h2>
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img class="imgAB" src="https://avatars2.githubusercontent.com/u/55962297?s=460&u=cc21587c51614db5c9db6860190b0a2e2a96e246&v=4" alt="Justin" />
+              </div>
+              <div class="flip-card-back">
+                <h1>Geb Brant</h1>
+                <Link to="https://github.com/Lassojeb" target="_blank">Jeb Brant<br /></Link>
+                <p>Architect & Engineer</p>
+                <p>We love that guy</p>
+              </div>
+            </div>
+          </div>
+          </div>
+{/* Jeb Profile */}
           <div className="container centerMe">
           <div class="flip-card ">
             <h2>
@@ -104,33 +98,11 @@ const About = () => {
                 <p>We love that guy</p>
               </div>
             </div>
+           </div>
           </div>
-
-          </div>
-
-
-
-
-        </div>
-      </div>
-
-
-
+         </div>
+       </div>
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   );
 };
 export default About;
