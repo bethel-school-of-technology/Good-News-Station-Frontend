@@ -413,6 +413,10 @@ button {
   transform: rotateY(180deg);
 }
 
+.aboutFlipBack {
+  color: #000000;
+}
+
 /* ------ NAVBAR ------ */
 
 .navbar {
