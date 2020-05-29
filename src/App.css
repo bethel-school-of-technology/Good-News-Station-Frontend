@@ -417,6 +417,16 @@ button {
   color: #000000;
 }
 
+/* ------ HELP VIDEO - JH ------ */
+.helpVids {
+  display: flex;
+  margin-top: 10px;
+}
+.helpHght {
+  margin-top: 10px;
+}
+
+
 /* ------ NAVBAR ------ */
 
 .navbar {
