@@ -68,8 +68,8 @@ img {
 }
 
 .lead {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: .5rem;
 }
 
 .text-center {
@@ -300,7 +300,7 @@ img {
 .form select,
 .form textarea {
   display: block;
-  width: 100%;
+  width: 200%;
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
@@ -311,19 +311,10 @@ button {
   font: inherit;
 }
 
-.form .social-input {
-  display: flex;
-}
-
-.form .social-input i {
-  padding: 0.5rem;
-  width: 4rem;
-}
-
 .table th,
 .table td {
   padding: 1rem;
-  text-align: left;
+  text-align: center;
 }
 
 .table th {
@@ -349,7 +340,7 @@ button {
 .col {
   flex: 1;
 }
-@media (max-width: 400px) {
+@media (max-width: 300px) {
   .flex-grid {
     display: block;
   }
@@ -363,22 +354,27 @@ button {
 }
 
 .imgAB {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
+  border-radius: 1.5rem;
 }
 .flipColor {
   color: #000000;
 }
 .flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   perspective: 1000px;
+  margin: 1em;
+  border-radius: 1.5rem;
 }
 .centerMe {
   display: flex;
   justify-content: center;
+  flex-flow: row wrap;
+  padding: 1em;
 }
+
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -387,6 +383,7 @@ button {
   transition: transform 0.6s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1.5rem;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -400,16 +397,15 @@ button {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  border-radius: 1.5rem;
 }
 
 .flip-card-front {
-  background-color: #bbb;
   color: black;
 }
 
 .flip-card-back {
   background-color: #2980b9;
-  color: white;
   transform: rotateY(180deg);
 }
 
@@ -461,13 +457,6 @@ button {
 
 /* ------ SIDEBAR & FOOTER ------ */
 
-/* .layout-container {
-  display: flex;
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 2rem;
-  margin-top: 6rem;
-} */
 .sidebar {
   display: flex;
   width: 100%;
@@ -607,10 +596,7 @@ button {
 .profile-grid {
   grid-template-areas:
     'top'
-    'about'
-    'exp'
-    'edu'
-    'github';
+    'about';
 }
 
 .profile-about .skills {
@@ -632,9 +618,7 @@ button {
   display: grid;
   grid-template-areas:
     'top top'
-    'about about'
-    'exp edu'
-    'github github';
+    'about about';
   grid-gap: 1rem;
 }
 

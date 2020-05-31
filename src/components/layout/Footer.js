@@ -20,7 +20,7 @@ const Footer = () => {
                 <Link to='/'>Content Policy</Link>
               </li>
               <li>
-                <Link to='/'>Contact Us</Link>
+                <Link to='/contact'>Contact Us</Link>
               </li>
               <li>
                 <Link to='/help'>Help Video</Link>
