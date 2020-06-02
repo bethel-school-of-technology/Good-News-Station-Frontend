@@ -5,7 +5,7 @@ const Spotlight = () => {
     return (
         <Fragment>
             <nav className="nav-sidebar">
-                <h1 className="">
+                <h1 className="textcenter">
                     User Spotlight
                 </h1>
                 <h4>

@@ -64,10 +64,10 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
           )}
         </nav>
       </div>
-      <div className="footer p-2">
+      <div className="sidebar3">
         <Spotlight />
       </div>
-      <div className="footer p-2">
+      <div className="sidebar3">
         <Footer />
       </div>
     </div>
