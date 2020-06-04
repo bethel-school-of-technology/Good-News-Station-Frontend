@@ -20,7 +20,7 @@ const About = () => {
           experience.
         </p>
         <br />
-        <h2>Founding Memebrs</h2>
+        <h2>Founding Members</h2>
       </div>
 
       <div className="centerMe">
@@ -94,10 +94,10 @@ const About = () => {
               </Link>
               <h3>Fullstack</h3>
               <strong>
-                <p className="aboutFlipBack">Be Greatfull</p>
+                <p className="aboutFlipBack">Be Grateful</p>
               </strong>
               <p>
-                Be gratefull of what you have and don't worry about what you
+                Be grateful of what you have and don't worry about what you
                 don't
               </p>
             </div>
