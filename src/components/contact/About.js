@@ -20,7 +20,7 @@ const About = () => {
           experience.
         </p>
         <br />
-        <h2>Founding Memebrs</h2>
+        <h2>Founding Members</h2>
       </div>
 
       <div className="centerMe">
@@ -140,7 +140,7 @@ const About = () => {
               />
             </div>
             <div class="flip-card-back p-1">
-            <Link to="profile/5ecedfb615afeb58d0da5874" target="_blank">
+            <Link to="profile/5ed95c90fd2a8398140e8c96" target="_blank">
                 <h1 className="text-light lead">Charles Bartels</h1>
               </Link>
               <h3>Engineer & Backend</h3>
